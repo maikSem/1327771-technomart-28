@@ -40,47 +40,59 @@
   </header>
   <main>
     <section>
-      <h2>КАТАЛОГ</h2> <!-- Скрытый заголовок-->
+      <h2 class="visually-hidden">КАТАЛОГ</h2> <!-- Скрытый заголовок-->
       <ul>
         <li>
           <h3>Материалы</h3>
-          <a href="">На любой вкус</a>
+          <a href="" aria-label="Материалы на любой вкус">На любой вкус</a>
           <div>Иконка</div>
         </li>
         <li>
           <h3>Инструмент</h3>
-          <a href="">На все случаи</a>
+          <a href="" aria-label="Инструмент на все случаи">На все случаи</a>
           <div>Иконка</div>
         </li>
         <li>
           <div>
             <h3>Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
-            <img src="img/man-and-hummer-drill.jpg" width="620" height="266" alt="">
+            <img src="img/man-and-hummer-drill.jpg" width="620" height="266"
+              alt="Мучжина сверлит отверстие в бетонной стене перфоратором фирмы Bosch">
           </div>
           <div>
-            <a href="catalog.html">Открыть каталог</a>
+            <a href="catalog.html" aria-label="Открыть каталог перфераторов">Открыть каталог</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Дрели</h3>
+            <p>Соседям на радость!</p>
+            <img src="img/man-and-screwdriver.jpg" width="620" height="266"
+              alt="Мужчина сверлит отверстие в кирпичной стене дрелью фирмы Bosch">
+          </div>
+          <div>
+            <a href="catalog.html" aria-label="Открыть каталог дрелей">Открыть каталог</a>
           </div>
         </li>
         <li>
           <h3>Техника</h3>
-          <a href="">Для стройки</a>
+          <a href="" aria-label="Техника для стройки">Для стройки</a>
           <div>Иконка</div>
         </li>
         <li>
           <h3>Скидка 50%</h3>
-          <a href="">На 350 товаров</a>
+          <a href="" aria-label="Скидка 50% на 350 товаров">На 350 товаров</a>
           <div>Иконка</div>
         </li>
         <li>
           <h3>Доставка</h3>
-          <a href="">Бесплатно</a>
+          <a href="" aria-label="Бесплатная доставка">Бесплатно</a>
           <div>Иконка</div>
         </li>
       </ul>
     </section>
     <section>
-      <h2>ТОВАРЫ</h2> <!-- Скрытый заголовок-->
+      <h2 class="visually-hidden">ТОВАРЫ</h2> <!-- Скрытый заголовок-->
       <div>
         <h3>Популярные товары:</h3>
         <a href="">Все популярные товары</a>
@@ -131,7 +143,7 @@
       </div>
     </section>
     <section>
-      <h2>ПРОИЗВОДИТЕЛИ</h2> <!-- Скрытый заголовок-->
+      <h2 class="visually-hidden">ПРОИЗВОДИТЕЛИ</h2> <!-- Скрытый заголовок-->
       <div>
         <h3>Популярные производители:</h3>
         <a href="">Все производители</a>
@@ -151,7 +163,7 @@
       </div>
     </section>
     <section>
-      <h2>СЕРВИСЫ</h2> <!-- Скрытый заголовок-->
+      <h2 class="visually-hidden">СЕРВИСЫ</h2> <!-- Скрытый заголовок-->
       <div>
         <h3>Сервисы</h3>
         <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
@@ -172,9 +184,26 @@
           поднимая его на ваш этаж!</p>
         <div>Иконка</div>
       </div>
+      <div>
+        <h3>Гарантия</h3>
+        <p>Если купленный у нас товар поломается или заискрит,<br>
+          а также в случае пожара, спровоцированного его<br>
+          возгоранием,вы всегда можете быть уверены в нашей<br>
+          гарантии.Мы обменяем сгоревший товар на новый<br>
+          Дом уж восстановите как-нибудь сами
+        </p>
+        <div>Иконка</div>
+      </div>
+      <div>
+        <h3>Кредит</h3>
+        <p>Залезть в долговую яму стало проще!<br>
+          Кредитные консультанты придут вам на помощь.</p>
+        <a href="" aria-label="Отправить заявку на кредит">Отправить заявку</a>
+        <div>Иконка</div>
+      </div>
     </section>
     <section>
-      <h2>О КОМПАНИИ и КОНТАКТЫ</h2> <!-- Скрытый заголовок-->
+      <h2 class="visually-hidden">О КОМПАНИИ и КОНТАКТЫ</h2> <!-- Скрытый заголовок-->
       <div>
         <h3>КОМПАНИЯ «ТЕХНОМАРТ»</h3>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br> ремонта и строительства не оставит
@@ -199,6 +228,36 @@
         <img src="img/card-location.svg" width="300" height="158" alt="Как к нам проехать">
         <a href="">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ</a>
       </div>
+      <section>
+        <h2 class="visually-hidden">Форма обратной связи</h2> <!-- Скрытый заголовок-->
+        <div>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <p>
+              <label>Ваше имя:
+                <input type="text" name="Name" placeholder="Имя Фамилия">
+              </label>
+            </p>
+            <p>
+              <label>Ваш e-mail:
+                <input type="email" name="Email" placeholder="email@example.com">
+              </label>
+            </p>
+            <p>
+              <label for="text-letter">Текст письма:
+                <textarea name="text-letter" id="text-letter" cols="30" rows="10"
+                  placeholder="В свободной форме"></textarea>
+              </label>
+            </p>
+            <button type="submit">Оформить заказ</button>
+            <button type="button">Закрыть форму</button>
+          </form>
+        </div>
+      </section>
+      <section>
+        <h2 class="visually-hidden">Карта google-map</h2> <!-- Скрытый заголовок-->
+        <div>Карта</div>
+        <button type="button">Закрыть карту</button>
+      </section>
     </section>
   </main>
   <footer>
@@ -236,7 +295,7 @@
       </div>
       <div>
         <p>Разработано -</p>
-        <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+        <a href="https://htmlacademy.ru" aria-label="Сайти разработчика">htmlacademy.ru</a>
       </div>
     </div>
   </footer>
