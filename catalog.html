@@ -9,7 +9,7 @@
 <body>
   <header>
     <div>
-      <a href="index.html">ТЕХНОМАРТ</a>
+      <a href="index.html" aria-label="Компания Техномарт">ТЕХНОМАРТ</a>
       <div>Поиск</div>
       <a href="">Закладки</a>
       <a href="">Корзина</a>
@@ -53,12 +53,48 @@
       </section>>
       <h2>Перфораторы</h2>
       <section>
-        <h3>Фильтр и сортировка</h3> <!-- Скрытый заголовок-->
+        <h3>Фильтр</h3>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Цена</legend>
+          </fieldset>
+          <fieldset>
+            <legend>Производитель</legend>
+            <ul>
+              <li><input type="checkbox" name="bosch" id="filter-bosch">
+                <label for="filter-bosch">Bosch</label>
+              </li>
+              <li><input type="checkbox" name="interscol" id="filter-interscol">
+                <label for="filter-interscol">Интерскол</label>
+              </li>
+              <li><input type="checkbox" name="makita" id="filter-makita">
+                <label for="filter-makita">Makita</label>
+              </li>
+              <li><input type="checkbox" name="dewalt" id="filter-dewalt">
+                <label for="filter-dewalt">Dewalt</label>
+              </li>
+              <li><input type="checkbox" name="hitachi" id="filter-hitachi">
+                <label for="filter-hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Питание</legend>
+            <ul>
+              <li><input type="radio" name="power-supply" value="battery" id="filter-battery">
+                <label for="filter-battery">Аккумуляторные</label>
+              </li>
+              <li><input type="radio" name="power-supply" value="network" id="filter-network">
+                <label for="filter-network">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </section>
+      <section>
+        <h3>Cортировка:</h3>
         <div>
-          <p>Фильтр:</p>
-        </div>
-        <div>
-          <p>Сортировка:</p>
           <ul>
             <li>
               <a href="">По цене</a>
@@ -75,45 +111,7 @@
         </div>
       </section>
       <section>
-        <h3>Параметры</h3> <!-- скрытый заголовок-->
-        <div>
-          <h4>Цена</h4>
-        </div>
-        <div>
-          <h4>Производитель</h4>
-          <ul>
-            <li><input type="checkbox">
-              <p>Bosch</p>
-            </li>
-            <li><input type="checkbox">
-              <p>Интерскол</p>
-            </li>
-            <li><input type="checkbox">
-              <p>Makita</p>
-            </li>
-            <li><input type="checkbox">
-              <p>Dewalt</p>
-            </li>
-            <li><input type="checkbox">
-              <p>Hitachi</p>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h4>Питание</h4>
-          <ul>
-            <li><input type="radio">
-              <p>Аккумуляторные</p>
-            </li>
-            <li><input type="radio">
-              <p>Сетевые</p>
-            </li>
-          </ul>
-        </div>
-        <button type="button">Показать</button>
-      </section>
-      <section>
-        <h3>Каталог</h3> <!-- скрытый заголовок-->
+        <h3 class="visually-hidden">Каталог перфораторов</h3> <!-- скрытый заголовок-->
         <ul>
           <li>
             <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000">
@@ -207,10 +205,10 @@
         </ul>
       </section>
       <ul>
-        <li><a href="">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">Следующая</a></li>
+        <li><a href="" aria-label="На первую страницу каталога">1</a></li>
+        <li><a href="" aria-label="На вторую страницу каталога">2</a></li>
+        <li><a href="" aria-label="На третью страницу каталога">3</a></li>
+        <li><a href="" aria-label="Следующая страница каталога">Следующая</a></li>
       </ul>
     </section>
     <section>
@@ -222,6 +220,13 @@
         В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
         ударная дрель.
       </p>
+    </section>
+    <section>
+      <h2 class="visually-hidden">Корзина</h2> <!-- Скрытый заголовок-->
+      <p>Товар добавлен в корзину</p>
+      <a href="">Оформить заказ</a>
+      <a href="">Продолжить покупки</a>
+      <button type="button">Закрыть корзину</button>
     </section>
   </main>
   <footer>
