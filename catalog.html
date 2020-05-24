@@ -9,7 +9,7 @@
 <body>
   <header>
     <div>
-      <a href="index.html" aria-label="Компания Техномарт">ТЕХНОМАРТ</a>
+      <a href="index.html">ТЕХНОМАРТ</a>
       <div>Поиск</div>
       <a href="">Закладки</a>
       <a href="">Корзина</a>
@@ -57,6 +57,7 @@
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Цена</legend>
+            <input type="range" name="price" id="price" min="0" max="300">
           </fieldset>
           <fieldset>
             <legend>Производитель</legend>
@@ -226,7 +227,7 @@
       <p>Товар добавлен в корзину</p>
       <a href="">Оформить заказ</a>
       <a href="">Продолжить покупки</a>
-      <button type="button">Закрыть корзину</button>
+      <button type="button" aria-label="Закрыть корзину">x</button>
     </section>
   </main>
   <footer>
