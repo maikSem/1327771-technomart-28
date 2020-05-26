@@ -67,6 +67,7 @@
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="filter-price">
             <legend>Цена</legend>
+            <input type="range" name="price" id="price" min="0" max="300">
           </fieldset>
           <fieldset class="filter-manufacturer">
             <legend>Производитель</legend>
@@ -237,7 +238,7 @@
       <p>Товар добавлен в корзину</p>
       <a href="" class="link-button">Оформить заказ</a>
       <a href="" class="button-basket">Продолжить покупки</a>
-      <button type="button" class="button-close">x</button>
+      <button type="button" aria-label="Закрыть корзину" class="button-close">x</button>
     </section>
   </main>
   <footer>
