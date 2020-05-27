@@ -1,0 +1,76 @@
+
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cuprum Regular'), local('Cuprum-Regular'),
+             url('../fonts/cuprum-v11-latin_cyrillic-regular.woff2') format('woff2'), 
+       url('../fonts/cuprum-v11-latin_cyrillic-regular.woff') format('woff'), 
+      }
+
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  font-weight: 700;
+   src: local('Cuprum Bold'), local('Cuprum-Bold'),
+       url('../fonts/cuprum-v11-latin_cyrillic-700.woff2') format('woff2'), 
+       url('../fonts/cuprum-v11-latin_cyrillic-700.woff') format('woff'), 
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PT Sans'), local('PTSans-Regular'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'), 
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'), 
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff'),
+}
+
+:root {
+    --basic-black: #000000;
+    --basic-white: #ffffff;
+    --basic-blue: #3BBCE3;
+    --basic-darkblue: #293449;
+    --basic-gulf-blue: #32425C;
+    --basic-red: #EE3643;
+    --basic-yellow: #FFC047;
+    --basic-light-yellow: #FFD180;
+    --basic-green: #63A63E;
+    --basic-light-green: #8ED78F;
+    --basic-light-purple: #DC91D8;
+    --basic-gray: #C5C5C5;
+    --basic-light-gray: #F2F6F8;
+    --basic-light-grayish: #F7F3EC;
+}
+
+/* Глобальные стили*/
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+  text-decoration: none;
+}
