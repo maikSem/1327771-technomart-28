@@ -1,36 +1,36 @@
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: normal;
-  src: local('Cuprum Regular'), local('Cuprum-Regular'),
+  src: local("Cuprum Regular"), local("Cuprum-Regular"),
              url('../fonts/cuprum-v11-latin_cyrillic-regular.woff2') format('woff2'), 
        url('../fonts/cuprum-v11-latin_cyrillic-regular.woff') format('woff'), 
       }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: 700;
-   src: local('Cuprum Bold'), local('Cuprum-Bold'),
+   src: local("Cuprum Bold"), local("Cuprum-Bold"),
        url('../fonts/cuprum-v11-latin_cyrillic-700.woff2') format('woff2'), 
        url('../fonts/cuprum-v11-latin_cyrillic-700.woff') format('woff'), 
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: normal;
-  src: local('PT Sans'), local('PTSans-Regular'),
+  src: local("PT Sans"), local("PTSans-Regular"),
        url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'), 
        url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff'),
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'),
+  src: local("PT Sans Bold"), local("PTSans-Bold"),
        url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'), 
        url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff'),
 }
@@ -39,9 +39,10 @@
     --basic-black: #000000;
     --basic-white: #ffffff;
     --basic-blue: #3BBCE3;
-    --basic-darkblue: #293449;
+    --basic-dark-blue: #293449;
     --basic-gulf-blue: #32425C;
     --basic-red: #EE3643;
+    --basic-dark-red: #BA2732;
     --basic-yellow: #FFC047;
     --basic-light-yellow: #FFD180;
     --basic-green: #63A63E;
@@ -50,6 +51,10 @@
     --basic-gray: #C5C5C5;
     --basic-light-gray: #F2F6F8;
     --basic-light-grayish: #F7F3EC;
+    --basic-fon: #F1F5F7;
+    --green-hover: #5FBB2D;
+    --midnight-hover: #161D29;
+    --dark-blue-header: #1D2739;
 }
 
 /* Глобальные стили*/
@@ -58,7 +63,7 @@ body {
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
@@ -73,4 +78,130 @@ img {
 
 a {
   text-decoration: none;
+}
+
+/* Стили шапки*/
+
+.box-header {
+  width: 100%;
+  color: var(--basic-white);
+  background-color: var(--basic-dark-blue);
+}
+
+.box-header a {
+  vertical-align: middle;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.header-logo {
+width: 220px;
+background-color: var(--basic-red);
+}
+
+.header-logo:active {
+  background-color: var(--basic-dark-red);
+}
+
+.header-search:focus {
+  color: var(--basic-white);
+background-color: var(--basic-black);
+
+}
+
+.header-order {
+  width: 150px;
+ height: 42px;
+ background-color: var(--basic-green);
+}
+
+.header-order:active {
+ background-color: var(--basic-green);
+}
+
+.header-order:hover {
+background-color: var(--green-hover);
+}
+
+.header-marker:active,
+.header-basket:active,
+.header-order:active,
+.header-search:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.header-marker:active,
+.header-basket:active {
+background-color: var(--midnight-hover);
+}
+
+.main-header {
+  background-color: var(--basic-fon);
+}
+
+.main-header-title h1 {
+  font-size: 16px; 
+  line-height: 23px;
+  font-weight: normal;
+  font-style: italic;
+  color: var(--basic-red);
+}
+
+.main-header-contact p:first-child {
+  width: 270px;
+  height: 45px;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--basic-red);
+  border: 3px solid var(--basic-white);
+}
+
+.main-header-contact p:last-child {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-gulf-blue);
+}
+
+.user-navigation a {
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.user-navigation a:hover {
+  color: var(--basic-red);
+}
+
+.user-navigation a:active {
+  color: var(--basic-gray);
+}
+
+.main-navigation {
+  background-color: var(--basic-gulf-blue);
+}
+
+.main-navigation li{
+  list-style: none;
+}
+
+.main-navigation a {
+  font-size: 18px;
+  line-height: 24px;
+  list-style: none;
+  color: var(--basic-white);
+}
+
+.main-navigation a:hover {
+  background-color: var(--basic-dark-blue);
+}
+
+.main-navigation a:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--dark-blue-header);
 }
