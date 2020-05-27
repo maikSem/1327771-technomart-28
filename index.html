@@ -65,7 +65,7 @@
             <img src="img/man-and-hummer-drill.jpg" width="620" height="266"
               alt="Мучжина сверлит отверстие в бетонной стене перфоратором фирмы Bosch">
           </div>
-          <div class="catalog-menu-button">
+          <div class="link-button">
             <a href="catalog.html" aria-label="Открыть каталог перфераторов">Открыть каталог</a>
           </div>
         </li>
@@ -76,7 +76,7 @@
             <img src="img/man-and-screwdriver.jpg" width="620" height="266"
               alt="Мужчина сверлит отверстие в кирпичной стене дрелью фирмы Bosch">
           </div>
-          <div class="catalog-menu-button">
+          <div class="link-button">
             <a href="catalog.html" aria-label="Открыть каталог дрелей">Открыть каталог</a>
           </div>
         </li>
@@ -101,7 +101,7 @@
       <h2 class="visually-hidden">ТОВАРЫ</h2> <!-- Скрытый заголовок-->
       <div class="popular-product-title">
         <h3>Популярные товары:</h3>
-        <a href="">Все популярные товары</a>
+        <a href="" class="link-button">Все популярные товары</a>
       </div>
       <div class="popular-product-box">
         <ul class="product-list">
@@ -111,8 +111,8 @@
             <p>32500 Р.</p>
             <p>25500 Р.</p>
             <div>
-              <button type="button">Купить</button>
-              <button type="button">В закладки</button>
+              <button type="button" class="button-buy">Купить</button>
+              <button type="button" class="button-marker">В закладки</button>
             </div>
           </li>
           <li class="product-item">
@@ -121,8 +121,8 @@
             <p>22500 Р.</p>
             <p>15500 Р.</p>
             <div>
-              <button type="button">Купить</button>
-              <button type="button">В закладки</button>
+              <button type="button" class="button-buy">Купить</button>
+              <button type="button" class="button-marker">В закладки</button>
             </div>
           </li>
           <li class="product-item">
@@ -131,8 +131,8 @@
             <p>30500 Р.</p>
             <p>25500 Р.</p>
             <div>
-              <button type="button">Купить</button>
-              <button type="button">В закладки</button>
+              <button type="button" class="button-buy">Купить</button>
+              <button type="button" class="button-marker">В закладки</button>
             </div>
           </li>
           <li class="product-item">
@@ -141,8 +141,8 @@
             <p></p>
             <p>12500 Р.</p>
             <div>
-              <button type="button" class="product-button">Купить</button>
-              <button type="button" class="product-button">В закладки</button>
+              <button type="button" class="button-buy">Купить</button>
+              <button type="button" class="button-marker">В закладки</button>
             </div>
           </li>
         </ul>
@@ -256,16 +256,13 @@
             </p>
             <button type="submit" class="link-button">Оформить заказ</button>
             <button type="button" class="button-close">x</button>
-            <button type="submit">Оформить заказ</button>
-            <button type="button" aria-label="Закрыть форму">x</button>
           </form>
         </div>
       </section>
       <section class="modal-card">
         <h2 class="visually-hidden">Карта google-map</h2> <!-- Скрытый заголовок-->
         <div>Карта</div>
-        <button type="button" class="button-close">x</button>
-        <button type="button" aria-label="Закрыть форму">x</button>
+        <button type="button" class="button-close" aria-label="Закрыть форму">x</button>
       </section>
     </section>
   </main>
