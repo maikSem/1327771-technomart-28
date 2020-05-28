@@ -55,6 +55,10 @@
     --green-hover: #5FBB2D;
     --midnight-hover: #161D29;
     --dark-blue-header: #1D2739;
+    --social-fon: #212A3A;
+    --arrow: #C1C6CE;
+    --border-button: #E5E5E5;
+    --dorder-catalog: #EAEAEA;
 }
 
 /* Глобальные стили*/
@@ -80,6 +84,9 @@ a {
   text-decoration: none;
 }
 
+fieldset {
+  border: none;
+}
 /* Стили шапки*/
 
 .box-header {
@@ -98,6 +105,7 @@ a {
 .header-logo {
 width: 220px;
 background-color: var(--basic-red);
+box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
 .header-logo:active {
@@ -196,6 +204,7 @@ a.user-cabinet {
 
 .main-navigation {
   background-color: var(--basic-gulf-blue);
+  box-shadow: inset 0px -5px 0px #293449;
 }
 
 .main-navigation li{
@@ -216,4 +225,233 @@ a.user-cabinet {
 .main-navigation a:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: var(--dark-blue-header);
+}
+
+/* Стили кнопок*/
+
+.link-button,
+.link-button a {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.link-button:active,
+.link-button a:active {
+  background-color: var(--basic-dark-red);
+}
+
+button.button-filter {
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  border: 1px solid var(--border-button);
+  background-color: var(--basic-white);
+}
+
+/* Стили основного содержимого */
+
+/* Секция о компании и контакты*/
+
+.company-title h3 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.company-title p {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.railway-carriers li {
+  font-size: 18px;
+  line-height: 24px;
+  list-style: none;
+}
+
+.contact h3 {
+  font-size: 30px;
+  line-height: 30px; 
+  text-transform: uppercase;
+}
+
+.contact p {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+/* Стили каталога*/
+
+.catalog {
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.breadcrumbs-list li {
+  list-style: none;
+}
+.breadcrumbs-list a {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.arrow-right {
+  color: var(--arrow);
+}
+
+.catalog-title {
+  background-color: var(--basic-light-gray);
+}
+
+.catalog-title h2 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-gulf-blue);
+}
+/* Стили каталога/Фильтры*/
+
+.catalog-filter {
+  text-transform: uppercase;
+}
+
+.catalog-filter h3 {
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--basic-light-grayish);
+}
+
+.catalog-filter li {
+  list-style: none;
+}
+
+.catalog-filter legend {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.catalog-filter label {
+  font-size: 15px;
+  line-height: 19px;
+}
+/* Стили каталога/Карточка товара*/
+
+.product-item {
+  width: 220px;
+  height: 318px;
+}
+
+li.product-item {
+  list-style: none;
+  border: 1px solid var(--dorder-catalog);
+}
+
+.product-item h4 {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+li.product-item p:first-child {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration-line: line-through;
+  
+}
+
+/* Стили подвала*/
+
+.footer-box {
+  color: var(--basic-fon);
+  background-color: var(--basic-gulf-blue);
+}
+
+.footer-box a {
+  color: var(--basic-fon);
+}
+
+.footer-logo a {
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.footer-logo a:active {
+  background-color: var(--basic-dark-red);
+}
+
+.footer-site-navigation li {
+  list-style: none;
+}
+
+.footer-site-navigation a:hover {
+  text-decoration: underline;
+}
+
+.footer-site-navigation a:active {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.footer-navigation-top a,
+.footer-navigation-bottom a{
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-navigation-bottom a {
+  color: var(--basic-light-yellow);
+}
+
+.footer-copyright,
+.footer-copyright a {
+  background-color: var(--basic-dark-blue);
+  color: var(--basic-white);
+}
+
+.footer-copyright p {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social a {
+  background-color: var(--social-fon);
+  border-radius: 50%;
+}
+
+.social a:hover,
+.social a:active {
+  background-color: var(--basic-red);
+}
+
+.feedback-email a,
+.footer-developer a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-light-yellow)
+}
+
+.feedback-email a:hover,
+.footer-developer a:hover {
+  text-decoration: underline;
+}
+
+.feedback-email a:active,
+.footer-developer a:active {
+  color: var(--basic-red);
+  text-decoration: none;
 }
