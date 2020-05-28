@@ -1,0 +1,494 @@
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Cuprum Regular"), local("Cuprum-Regular"),
+    url("../fonts/cuprum-v11-latin_cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/cuprum-v11-latin_cyrillic-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Cuprum Bold"), local("Cuprum-Bold"),
+    url("../fonts/cuprum-v11-latin_cyrillic-700.woff2") format("woff2"),
+    url("../fonts/cuprum-v11-latin_cyrillic-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PT Sans"), local("PTSans-Regular"),
+    url("../fonts/pt-sans-v11-latin_cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/pt-sans-v11-latin_cyrillic-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans Bold"), local("PTSans-Bold"),
+    url("../fonts/pt-sans-v11-latin_cyrillic-700.woff2") format("woff2"),
+    url("../fonts/pt-sans-v11-latin_cyrillic-700.woff") format("woff");
+}
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-blue: #3bbce3;
+  --basic-dark-blue: #293449;
+  --basic-gulf-blue: #32425c;
+  --basic-red: #ee3643;
+  --basic-dark-red: #ba2732;
+  --basic-yellow: #ffc047;
+  --basic-light-yellow: #ffd180;
+  --basic-green: #63a63e;
+  --basic-light-green: #8ed78f;
+  --basic-light-purple: #dc91d8;
+  --basic-gray: #c5c5c5;
+  --basic-light-gray: #f2f6f8;
+  --basic-light-grayish: #f7f3ec;
+  --basic-fon: #f1f5f7;
+  --green-hover: #5fbb2d;
+  --midnight-hover: #161d29;
+  --dark-blue-header: #1d2739;
+  --social-fon: #212a3a;
+  --arrow: #c1c6ce;
+  --border-button: #e5e5e5;
+  --border-buy: #367315;
+  --dark-green-hover: #518534;
+  --dorder-catalog: #eaeaea;
+}
+
+/* Глобальные стили*/
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset {
+  border: none;
+}
+/* Стили шапки*/
+
+.box-header {
+  width: 100%;
+  color: var(--basic-white);
+  background-color: var(--basic-dark-blue);
+}
+
+.box-header a {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.header-logo {
+  width: 220px;
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.header-logo:active {
+  background-color: var(--basic-dark-red);
+}
+
+input[type="search"] {
+  background-color: var(--basic-dark-blue);
+  border: none;
+}
+
+input[type="search"]:focus {
+  background-color: var(--basic-white);
+}
+
+.header-search:focus {
+  color: var(--basic-white);
+  background-color: var(--basic-black);
+}
+
+.header-order {
+  width: 150px;
+  height: 42px;
+  background-color: var(--basic-green);
+}
+
+.header-order:hover {
+  background-color: var(--green-hover);
+}
+
+.header-search span {
+  opacity: 0.3;
+}
+
+.header-marker:active,
+.header-basket:active,
+.header-order:active,
+.header-search:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.header-marker:active,
+.header-basket:active {
+  background-color: var(--midnight-hover);
+}
+
+.main-header {
+  background-color: var(--basic-fon);
+}
+
+.main-header-title h1 {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: normal;
+  font-style: italic;
+  color: var(--basic-red);
+}
+
+.main-header-contact p:first-child {
+  width: 270px;
+  height: 45px;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+  color: var(--basic-red);
+  border: 3px solid var(--basic-white);
+}
+
+.main-header-contact p:last-child {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-gulf-blue);
+}
+
+.user-navigation a,
+.user-name p {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.user-navigation a:hover {
+  color: var(--basic-red);
+}
+
+.user-navigation a:active {
+  color: var(--basic-gray);
+}
+
+.user-name {
+  width: 299px;
+}
+
+a.user-order,
+a.user-cabinet {
+  font-size: 16px;
+  line-height: 18px;
+  background-color: var(--basic-fon);
+}
+
+.main-navigation {
+  background-color: var(--basic-gulf-blue);
+  box-shadow: inset 0px -5px 0px #293449;
+}
+
+.main-navigation li {
+  list-style: none;
+}
+
+.main-navigation a {
+  font-size: 18px;
+  line-height: 24px;
+  list-style: none;
+  color: var(--basic-white);
+}
+
+.main-navigation a:hover {
+  background-color: var(--basic-dark-blue);
+}
+
+.main-navigation a:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: var(--dark-blue-header);
+}
+
+/* Стили кнопок*/
+
+.link-button,
+.link-button a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.link-button:active,
+.link-button a:active {
+  background-color: var(--basic-dark-red);
+}
+
+button.button-filter {
+  font-size: 13px;
+  line-height: 18px;
+  border: 1px solid var(--border-button);
+  background-color: var(--basic-white);
+}
+
+button.button-buy {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px var(--border-buy);
+}
+
+button.button-buy:hover {
+  background-color: var(--green-hover);
+}
+
+button.button-buy:active {
+  background-color: var(--dark-green-hover);
+}
+
+button.button-marker {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 3px solid var(--basic-green);
+  border-radius: 2px;
+  color: var(--basic-gulf-blue);
+  background-color: var(--basic-white);
+}
+
+button.button-marker:hover {
+  border-color: var(--basic-gulf-blue);
+}
+
+button.button-marker:active {
+  opacity: 0.5;
+}
+/* Стили основного содержимого */
+
+/* Секция о компании и контакты*/
+.company-title h3 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.company-title p {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.railway-carriers li {
+  font-size: 18px;
+  line-height: 24px;
+  list-style: none;
+}
+
+.contact h3 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.contact p {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+/* Стили каталога*/
+
+.catalog {
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+.breadcrumbs-list li {
+  list-style: none;
+}
+.breadcrumbs-list a {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.arrow-right {
+  color: var(--arrow);
+}
+
+.catalog-title {
+  background-color: var(--basic-light-gray);
+}
+
+.catalog-title h2 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-gulf-blue);
+}
+/* Стили каталога/Фильтры*/
+
+.catalog-filter {
+  text-transform: uppercase;
+}
+
+.catalog-filter h3 {
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--basic-light-grayish);
+}
+
+.catalog-filter li {
+  list-style: none;
+}
+
+.catalog-filter legend {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.catalog-filter label {
+  font-size: 15px;
+  line-height: 19px;
+}
+/* Стили каталога/Карточка товара*/
+
+.product-item {
+  width: 220px;
+  height: 318px;
+}
+
+li.product-item {
+  list-style: none;
+  border: 1px solid var(--dorder-catalog);
+}
+
+.product-item h4 {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.product-item p {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  text-decoration-line: line-through;
+}
+
+/* Стили подвала*/
+
+.footer-box {
+  color: var(--basic-fon);
+  background-color: var(--basic-gulf-blue);
+}
+
+.footer-box a {
+  color: var(--basic-fon);
+}
+
+.footer-logo a {
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.footer-logo a:active {
+  background-color: var(--basic-dark-red);
+}
+
+.footer-site-navigation li {
+  list-style: none;
+}
+
+.footer-site-navigation a:hover {
+  text-decoration: underline;
+}
+
+.footer-site-navigation a:active {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.footer-navigation-top a,
+.footer-navigation-bottom a {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-navigation-bottom a {
+  color: var(--basic-light-yellow);
+}
+
+.footer-copyright,
+.footer-copyright a {
+  background-color: var(--basic-dark-blue);
+  color: var(--basic-white);
+}
+
+.footer-copyright p {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social a {
+  background-color: var(--social-fon);
+  border-radius: 50%;
+}
+
+.social a:hover,
+.social a:active {
+  background-color: var(--basic-red);
+}
+
+.feedback-email a,
+.footer-developer a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-light-yellow);
+}
+
+.feedback-email a:hover,
+.footer-developer a:hover {
+  text-decoration: underline;
+}
+
+.feedback-email a:active,
+.footer-developer a:active {
+  color: var(--basic-red);
+  text-decoration: none;
+}
