@@ -1,20 +1,19 @@
-
 @font-face {
   font-family: "Cuprum";
   font-style: normal;
   font-weight: normal;
   src: local("Cuprum Regular"), local("Cuprum-Regular"),
-             url('../fonts/cuprum-v11-latin_cyrillic-regular.woff2') format('woff2'), 
-       url('../fonts/cuprum-v11-latin_cyrillic-regular.woff') format('woff'), 
-      }
+    url("../fonts/cuprum-v11-latin_cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/cuprum-v11-latin_cyrillic-regular.woff") format("woff");
+}
 
 @font-face {
   font-family: "Cuprum";
   font-style: normal;
   font-weight: 700;
-   src: local("Cuprum Bold"), local("Cuprum-Bold"),
-       url('../fonts/cuprum-v11-latin_cyrillic-700.woff2') format('woff2'), 
-       url('../fonts/cuprum-v11-latin_cyrillic-700.woff') format('woff'), 
+  src: local("Cuprum Bold"), local("Cuprum-Bold"),
+    url("../fonts/cuprum-v11-latin_cyrillic-700.woff2") format("woff2"),
+    url("../fonts/cuprum-v11-latin_cyrillic-700.woff") format("woff");
 }
 
 @font-face {
@@ -22,8 +21,8 @@
   font-style: normal;
   font-weight: normal;
   src: local("PT Sans"), local("PTSans-Regular"),
-       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'), 
-       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff'),
+    url("../fonts/pt-sans-v11-latin_cyrillic-regular.woff2") format("woff2"),
+    url("../fonts/pt-sans-v11-latin_cyrillic-regular.woff") format("woff");
 }
 
 @font-face {
@@ -31,34 +30,36 @@
   font-style: normal;
   font-weight: 700;
   src: local("PT Sans Bold"), local("PTSans-Bold"),
-       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'), 
-       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff'),
+    url("../fonts/pt-sans-v11-latin_cyrillic-700.woff2") format("woff2"),
+    url("../fonts/pt-sans-v11-latin_cyrillic-700.woff") format("woff");
 }
 
 :root {
-    --basic-black: #000000;
-    --basic-white: #ffffff;
-    --basic-blue: #3BBCE3;
-    --basic-dark-blue: #293449;
-    --basic-gulf-blue: #32425C;
-    --basic-red: #EE3643;
-    --basic-dark-red: #BA2732;
-    --basic-yellow: #FFC047;
-    --basic-light-yellow: #FFD180;
-    --basic-green: #63A63E;
-    --basic-light-green: #8ED78F;
-    --basic-light-purple: #DC91D8;
-    --basic-gray: #C5C5C5;
-    --basic-light-gray: #F2F6F8;
-    --basic-light-grayish: #F7F3EC;
-    --basic-fon: #F1F5F7;
-    --green-hover: #5FBB2D;
-    --midnight-hover: #161D29;
-    --dark-blue-header: #1D2739;
-    --social-fon: #212A3A;
-    --arrow: #C1C6CE;
-    --border-button: #E5E5E5;
-    --dorder-catalog: #EAEAEA;
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-blue: #3bbce3;
+  --basic-dark-blue: #293449;
+  --basic-gulf-blue: #32425c;
+  --basic-red: #ee3643;
+  --basic-dark-red: #ba2732;
+  --basic-yellow: #ffc047;
+  --basic-light-yellow: #ffd180;
+  --basic-green: #63a63e;
+  --basic-light-green: #8ed78f;
+  --basic-light-purple: #dc91d8;
+  --basic-gray: #c5c5c5;
+  --basic-light-gray: #f2f6f8;
+  --basic-light-grayish: #f7f3ec;
+  --basic-fon: #f1f5f7;
+  --green-hover: #5fbb2d;
+  --midnight-hover: #161d29;
+  --dark-blue-header: #1d2739;
+  --social-fon: #212a3a;
+  --arrow: #c1c6ce;
+  --border-button: #e5e5e5;
+  --border-buy: #367315;
+  --dark-green-hover: #518534;
+  --dorder-catalog: #eaeaea;
 }
 
 /* Глобальные стили*/
@@ -76,8 +77,8 @@ body {
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -96,36 +97,43 @@ fieldset {
 }
 
 .box-header a {
-  vertical-align: middle;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
 }
 
 .header-logo {
-width: 220px;
-background-color: var(--basic-red);
-box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  width: 220px;
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
 .header-logo:active {
   background-color: var(--basic-dark-red);
 }
 
+input[type="search"] {
+  background-color: var(--basic-dark-blue);
+  border: none;
+}
+
+input[type="search"]:focus {
+  background-color: var(--basic-white);
+}
+
 .header-search:focus {
   color: var(--basic-white);
-background-color: var(--basic-black);
-
+  background-color: var(--basic-black);
 }
 
 .header-order {
   width: 150px;
- height: 42px;
- background-color: var(--basic-green);
+  height: 42px;
+  background-color: var(--basic-green);
 }
 
 .header-order:hover {
-background-color: var(--green-hover);
+  background-color: var(--green-hover);
 }
 
 .header-search span {
@@ -141,7 +149,7 @@ background-color: var(--green-hover);
 
 .header-marker:active,
 .header-basket:active {
-background-color: var(--midnight-hover);
+  background-color: var(--midnight-hover);
 }
 
 .main-header {
@@ -149,7 +157,7 @@ background-color: var(--midnight-hover);
 }
 
 .main-header-title h1 {
-  font-size: 16px; 
+  font-size: 16px;
   line-height: 23px;
   font-weight: normal;
   font-style: italic;
@@ -162,8 +170,6 @@ background-color: var(--midnight-hover);
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
   color: var(--basic-red);
   border: 3px solid var(--basic-white);
 }
@@ -178,7 +184,6 @@ background-color: var(--midnight-hover);
 .user-name p {
   font-size: 21px;
   line-height: 21px;
-  text-align: center;
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
@@ -207,7 +212,7 @@ a.user-cabinet {
   box-shadow: inset 0px -5px 0px #293449;
 }
 
-.main-navigation li{
+.main-navigation li {
   list-style: none;
 }
 
@@ -233,7 +238,6 @@ a.user-cabinet {
 .link-button a {
   font-size: 14px;
   line-height: 18px;
-  text-align: center;
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: var(--basic-red);
@@ -247,15 +251,51 @@ a.user-cabinet {
 button.button-filter {
   font-size: 13px;
   line-height: 18px;
-  text-align: center;
   border: 1px solid var(--border-button);
   background-color: var(--basic-white);
 }
 
+button.button-buy {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px var(--border-buy);
+}
+
+button.button-buy:hover {
+  background-color: var(--green-hover);
+}
+
+button.button-buy:active {
+  background-color: var(--dark-green-hover);
+}
+
+button.button-marker {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 3px solid var(--basic-green);
+  border-radius: 2px;
+  color: var(--basic-gulf-blue);
+  background-color: var(--basic-white);
+}
+
+button.button-marker:hover {
+  border-color: var(--basic-gulf-blue);
+}
+
+button.button-marker:active {
+  opacity: 0.5;
+}
 /* Стили основного содержимого */
 
 /* Секция о компании и контакты*/
-
 .company-title h3 {
   font-size: 30px;
   line-height: 30px;
@@ -276,7 +316,7 @@ button.button-filter {
 
 .contact h3 {
   font-size: 30px;
-  line-height: 30px; 
+  line-height: 30px;
   text-transform: uppercase;
 }
 
@@ -358,16 +398,13 @@ li.product-item {
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
-  text-align: center;
 }
 
-li.product-item p:first-child {
+.product-item p {
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
-  text-align: center;
   text-decoration-line: line-through;
-  
 }
 
 /* Стили подвала*/
@@ -404,7 +441,7 @@ li.product-item p:first-child {
 }
 
 .footer-navigation-top a,
-.footer-navigation-bottom a{
+.footer-navigation-bottom a {
   font-size: 18px;
   line-height: 24px;
 }
@@ -442,7 +479,7 @@ li.product-item p:first-child {
 .footer-developer a {
   font-size: 16px;
   line-height: 18px;
-  color: var(--basic-light-yellow)
+  color: var(--basic-light-yellow);
 }
 
 .feedback-email a:hover,
