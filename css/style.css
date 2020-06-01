@@ -66,8 +66,15 @@
 
 /* Глобальные стили*/
 
+html {
+  height: 100%;
+}
+
 body {
-  min-width: 960px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -85,6 +92,11 @@ img {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -106,12 +118,33 @@ fieldset {
   overflow: hidden;
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Стили шапки*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--basic-fon);
+  outline: 5px solid rgba(0, 255, 0, 0.3);
+  outline-offset: -5px;
+}
 
 .box-header {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   color: var(--basic-white);
   background-color: var(--basic-dark-blue);
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
 }
 
 .box-header a {
@@ -121,7 +154,6 @@ fieldset {
 }
 
 .header-logo {
-  width: 220px;
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
@@ -171,7 +203,11 @@ input[type="search"]:focus {
 }
 
 .main-header {
-  background-color: var(--basic-fon);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
 }
 
 .main-header-title h1 {
@@ -226,8 +262,9 @@ a.user-cabinet {
 }
 
 .main-navigation {
-  background-color: var(--basic-gulf-blue);
-  box-shadow: inset 0px -5px 0px #293449;
+  width: 100%;
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
 }
 
 .main-navigation li {
@@ -248,6 +285,14 @@ a.user-cabinet {
 .main-navigation a:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: var(--dark-blue-header);
+}
+
+.site-navigation {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+  background-color: var(--basic-gulf-blue);
+  box-shadow: inset 0px -5px 0px #293449;
 }
 
 /* Стили кнопок*/
@@ -588,8 +633,7 @@ button.button-marker:active {
 /* Стили каталога/Карточка товара*/
 
 .product-item {
-  width: auto
-  height: auto;
+  width: auto;
 }
 
 li.product-item {
