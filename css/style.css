@@ -74,7 +74,7 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  width: 100%;
+  min-width: 960px;
   margin: 0;
   padding: 0;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -92,19 +92,6 @@ img {
 
 a {
   text-decoration: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-}
-
-fieldset {
-  border: none;
 }
 
 .visually-hidden {
@@ -129,33 +116,37 @@ fieldset {
 
 /* Стили шапки*/
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: var(--basic-fon);
-  outline: 5px solid rgba(0, 255, 0, 0.3);
-  outline-offset: -5px;
 }
 
 .box-header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: auto;
   color: var(--basic-white);
   background-color: var(--basic-dark-blue);
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
 }
 
 .box-header a {
+  margin: 0;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
 }
 
+.box-header-wrapper {
+  background-color: var(--basic-dark-blue);
+}
+
 .header-logo {
-  background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+display: block;
+width: 220px;
+text-align: center;
+padding-top: 12px;
+padding-bottom: 12px;
+background-color: var(--basic-red);
+box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+cursor: pointer;
 }
 
 .header-logo:active {
@@ -206,8 +197,6 @@ input[type="search"]:focus {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
 }
 
 .main-header-title h1 {
@@ -263,8 +252,6 @@ a.user-cabinet {
 
 .main-navigation {
   width: 100%;
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
 }
 
 .main-navigation li {
@@ -375,6 +362,15 @@ button.button-marker:active {
   border: 1px solid var(--basic-red);
 }
 
+.hummer-drill-button,
+.screwd-river-button {
+  position: absolute;
+  display: block;
+  left: 28px;
+  bottom: 31px;
+  padding: 10px 45px;
+}
+
 /* Стили основного содержимого */
 
 /* Стили основного содержимого/навигация по каталогу*/
@@ -403,19 +399,6 @@ button.button-marker:active {
   background-color: rgba(197, 197, 197, 0.3);
 }
 
-.catalog-menu-title h3 {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: black;
-}
-
-.catalog-menu-title p {
-  font-size: 18px;
-  line-height: 24px;
-}
-
 .materials,
 .delivery {
   background-color: var(--basic-yellow);
@@ -428,8 +411,49 @@ button.button-marker:active {
 .machinery {
   background-color: var(--basic-light-purple);
 }
+
 .discount {
   background-color: var(--basic-light-green);
+}
+
+.hummer-drill {
+  position: relative;
+  width: 620px;
+  height: 266px;
+  background-image: url("../img/man-and-hummer-drill.jpg");
+  background-repeat: no-repeat;
+}
+
+.screwd-river {
+  position: relative;
+  width: 620px;
+  height: 266px;
+  background-image: url("../img/man-and-screwdriver.jpg");
+  background-repeat: no-repeat;
+}
+
+.hummer-drill h3,
+.screwd-river h3 {
+  position: absolute;
+  left: 24px;
+  top: 23px;
+  margin: 0;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hummer-drill p,
+.screwd-river p {
+  position: absolute;
+  left: 24px;
+  top: 64px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: var(--basic-white);
 }
 
 /* Стили основного содержимого/ Популярный товар*/
@@ -485,6 +509,11 @@ button.button-marker:active {
   line-height: 24px;
 }
 /* Секция о компании и контакты*/
+.company-contact {
+  display: flex;
+  justify-content: space-between;
+}
+
 .company-title h3 {
   font-size: 30px;
   line-height: 30px;
@@ -501,6 +530,11 @@ button.button-marker:active {
   font-size: 18px;
   line-height: 24px;
   list-style: none;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact h3 {
@@ -545,12 +579,31 @@ button.button-marker:active {
 /* Стили каталога*/
 
 .catalog {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-content: start;
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
-.breadcrumbs-list li {
+/* Стили каталога/ Хлебные крошки*/
+
+.breadcrumbs {
+  grid-column: 1 / -1;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  margin-top: 29px;
+  margin-bottom: 20px;
+  padding: 0;
   list-style: none;
 }
+
+.breadcrumbs-list li:not(:first-child) {
+  margin-left: 40px;
+  list-style: none;
+}
+
 .breadcrumbs-list a {
   font-size: 13px;
   line-height: 18px;
@@ -558,18 +611,22 @@ button.button-marker:active {
   color: var(--basic-black);
 }
 
-.arrow-right {
-  color: var(--arrow);
-}
+/* Стили каталога/ Заголовок*/
 
 .catalog-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  margin-bottom: 20px;
   background-color: var(--basic-light-gray);
 }
 
 .catalog-title h2 {
+  margin: 0;
+  padding: 30px 0 30px 30px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
+  font-weight: normal;
   text-transform: uppercase;
   color: var(--basic-gulf-blue);
 }
@@ -577,6 +634,8 @@ button.button-marker:active {
 
 .catalog-filter {
   text-transform: uppercase;
+  outline: 5px solid yellowgreen;
+  outline-offset: -5px;
 }
 
 .catalog-filter h3 {
@@ -604,6 +663,11 @@ button.button-marker:active {
 /* Стили каталога/Сортировка*/
 
 .catalog-sorting {
+  display: flex;
+  width: 700px;
+  height: 38px;
+  margin-left: 20px;
+  margin-bottom: 28px;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -628,6 +692,25 @@ button.button-marker:active {
 
 .catalog-sorting a:active {
   color: var(--basic-red);
+}
+
+.sorting-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+/* Стили каталога/Список товаров*/
+
+.product {
+  margin-left: 20px;
+}
+ 
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 700px;
 }
 
 /* Стили каталога/Карточка товара*/
@@ -669,6 +752,16 @@ li.product-item {
   background-color: var(--basic-red);
 }
 
+/* Cтили каталога/ Навигаия по списку товаров*/
+
+.catalog-navigation {
+  display: flex;
+  grid-column: 2 / 3;
+  margin: 50px 0px 50px 20px;
+  padding: 0;
+  list-style: none;
+}
+
 /* Стили каталога/Текст*/
 
 .catalog-text p {
@@ -679,7 +772,18 @@ li.product-item {
 
 /* Стили подвала*/
 
+footer {
+  background-color: var(--basic-dark-blue);
+}
+
+.footer-box-wrapper {
+  width: auto;
+  background-color: var(--basic-gulf-blue);
+}
+
 .footer-box {
+  display: flex;
+  justify-content: space-between;
   color: var(--basic-fon);
   background-color: var(--basic-gulf-blue);
 }
@@ -710,6 +814,16 @@ li.product-item {
   text-decoration: none;
 }
 
+.footer-navigation-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-navigation-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-navigation-top a,
 .footer-navigation-bottom a {
   font-size: 18px;
@@ -718,6 +832,16 @@ li.product-item {
 
 .footer-navigation-bottom a {
   color: var(--basic-light-yellow);
+}
+
+.footer-copyright-fon {
+  width: auto;
+  background-color: var(--basic-dark-blue);
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-copyright,
@@ -729,6 +853,11 @@ li.product-item {
 .footer-copyright p {
   font-size: 16px;
   line-height: 18px;
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
 }
 
 .social li {
@@ -762,3 +891,24 @@ li.product-item {
   color: var(--basic-red);
   text-decoration: none;
 }
+
+/* Модальные окна*/
+
+.modal-form {
+  display: none;
+}
+
+.modal-card {
+  display: none;
+}
+
+.catalog-basket {
+  display: none;
+}
+
+/* Временные стили*/
+
+/*
+outline: 5px solid rgba(0, 255, 255, 0.3);
+outline-offset: -5px;
+*/
