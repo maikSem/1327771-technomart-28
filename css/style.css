@@ -107,7 +107,7 @@ a {
 }
 
 .container {
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -392,16 +392,31 @@ a.user-cabinet {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.catalog-menu-item {
+  position: relative;
+}
+
 .catalog-menu-item h3 {
+  margin: 0;
+  padding: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
   color: var(--basic-white);
+}
+
+.catalog-menu-item a:not(:nth-child(4)),
+.catalog-menu-item a:not(:nth-child(5)) {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  padding: 10px 23px;
 }
 
 .catalog-menu-item a:not(.link-button) {
@@ -423,32 +438,37 @@ a.user-cabinet {
 }
 
 .materials {
-  grid-column: 0 / 2;
-  grid-row: 0 / 2;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .tool {
-  grid-column: 1 / 3;
-  grid-row: 0 / 2;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
   background-color: var(--basic-blue);
 }
 
 .machinery {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
+  grid-column: 3 /4;
+  grid-row: 1 / 2;
   background-color: var(--basic-light-purple);
 }
 
 .discount {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
   background-color: var(--basic-light-green);
 }
 
+.delivery {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
 .hummer-drill {
-  grid-column: 0 / 3;
-  grid-row: 1 / 4;
+  grid-column: 1 /3;
+  grid-row: 2 / 4;
   position: relative;
-  width: 620px;
-  height: 266px;
   background-image: url("../img/man-and-hummer-drill.jpg");
   background-repeat: no-repeat;
 }
@@ -797,10 +817,6 @@ a.user-cabinet {
   color: var(--basic-white);
   background-color: var(--basic-red);
   border-radius: 2px;
-}
-
-.item-button {
-
 }
 
 /* Cтили каталога/ Навигаия по списку товаров*/
