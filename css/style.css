@@ -389,6 +389,11 @@ a.user-cabinet {
 /* Стили основного содержимого/навигация по каталогу*/
 
 .catalog-menu-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -417,11 +422,20 @@ a.user-cabinet {
   background-color: var(--basic-yellow);
 }
 
+.materials {
+  grid-column: 0 / 2;
+  grid-row: 0 / 2;
+}
+
 .tool {
+  grid-column: 1 / 3;
+  grid-row: 0 / 2;
   background-color: var(--basic-blue);
 }
 
 .machinery {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
   background-color: var(--basic-light-purple);
 }
 
@@ -430,6 +444,8 @@ a.user-cabinet {
 }
 
 .hummer-drill {
+  grid-column: 0 / 3;
+  grid-row: 1 / 4;
   position: relative;
   width: 620px;
   height: 266px;
@@ -438,6 +454,7 @@ a.user-cabinet {
 }
 
 .screwd-river {
+  display: none;
   position: relative;
   width: 620px;
   height: 266px;
