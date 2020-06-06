@@ -119,6 +119,7 @@ a {
 /* Стили шапки*/
 header {
   background-color: var(--basic-fon);
+  z-index: 0;
 }
 
 .box-header {
@@ -129,7 +130,8 @@ header {
   background-color: var(--basic-dark-blue);
 }
 
-.box-header a {
+.box-header a:not(:first-child) {
+  display: block;
   margin: 0;
   font-size: 18px;
   line-height: 24px;
@@ -169,9 +171,77 @@ input[type="search"]:focus {
   background-color: var(--basic-black);
 }
 
-.header-order {
+.header-list {
+  width: 450px;
+}
+
+.header-list ul {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 450px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-list a {
+  display: block;
   width: 150px;
-  height: auto;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.header-basket {
+  position: relative;
+  padding: 9px 26px 9px 49px;
+}
+
+.header-basket::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 26px;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/icon/icon-cart.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.header-basket:hover::before,
+.header-marker:hover::before {
+  opacity: 1;
+}
+
+.header-basket:active::before,
+.header-basket:focus::before,
+.header-marker:active::before,
+.header-marker:focus::before {
+  opacity: 0.3;
+}
+
+.header-marker {
+  position: relative;
+  padding: 9px 24px 9px 43px;
+}
+
+.header-marker::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  width: 14px;
+  height: 16px;
+  background-image: url(../img/icon/icon-bookmark.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.header-order {
+  padding: 9px 16px 9px 19px;
   background-color: var(--basic-green);
 }
 
@@ -198,10 +268,12 @@ input[type="search"]:focus {
 .main-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
-.main-header-title h1 {
+.main-header h1 {
+  margin: 0;
   font-size: 16px;
   line-height: 23px;
   font-weight: normal;
@@ -209,7 +281,11 @@ input[type="search"]:focus {
   color: var(--basic-red);
 }
 
-.main-header-contact p:first-child {
+.number-phone {
+  position: relative;
+  margin: 0;
+  margin-bottom: 3px;
+  padding: 4px 42px 4px 71px;
   width: 270px;
   height: auto;
   font-size: 21px;
@@ -219,10 +295,67 @@ input[type="search"]:focus {
   border: 3px solid var(--basic-white);
 }
 
-.main-header-contact p:last-child {
+.number-phone::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 39px;
+  width: 19px;
+  height: 19px;
+  background-image: url(../img/icon/icon-phone.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.adress {
+  margin: 0;
+  /* margin-top: 3px; */
+  text-align: center;
   font-size: 14px;
   line-height: 24px;
   color: var(--basic-gulf-blue);
+}
+
+.user-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 46px;
+  margin-bottom: 67px;
+}
+
+.user-navigation a {
+  display: block;
+}
+
+.user-navigation a:last-child {
+  margin-left: 10px;
+  padding: 12px 24px;
+}
+
+.login {
+  position: relative;
+  padding: 12px 27px 12px 47px;
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 19px;
+  width: 20px;
+  height: 17px;
+  background-image: url(../img/icon/icon-login.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.login:hover::before {
+  opacity: 1;
+}
+
+.login:active::before {
+  opacity: 0.3;
 }
 
 .user-navigation a,
@@ -278,10 +411,17 @@ a.user-cabinet {
 
 .site-navigation {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 60px;
+  padding: 0;
   background-color: var(--basic-gulf-blue);
   box-shadow: inset 0px -5px 0px #293449;
+}
+
+.site-navigation a {
+  display: block;
+  padding: 16px 28px 20px 28px;
 }
 
 /* Стили кнопок*/
@@ -618,14 +758,16 @@ a.user-cabinet {
 }
 
 .manufacturer-list li {
-  width: 220px;
-  height: 145px;
   border: 1px solid var(--border-catalog);
 }
 
 .manufacturer-list a {
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 220px;
+  height: 145px;
 }
 
 .manufacturer-list li:hover {
@@ -661,6 +803,10 @@ a.user-cabinet {
 
 .services-delivery {
   position: relative;
+  height: 100%;
+  background-image: url("../img/service-car-delivery.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .services-guarantee {
@@ -681,31 +827,27 @@ a.user-cabinet {
   list-style: none;
 }
 
-.services-menu li {
-  width: 240px;
-  height: auto;
-  background-color: var(--basic-gulf-blue);
-  box-shadow: 0px 1px 0px var(--basic-dark-blue), inset 0px 1px 0px #405069;
-}
-
-.services-menu li:hover {
-  background-color: var(--basic-dark-blue);
-}
-
-.services-menu li:active {
-  background-color: var(--basic-white);
-  box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
-}
-
 .services-menu a {
+  display: block;
+  width: 240px;
+  padding: 14px 0 16px 22px;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
   color: var(--basic-white);
+  background-color: var(--basic-gulf-blue);
+  box-shadow: 0px 1px 0px var(--basic-dark-blue), inset 0px 1px 0px #405069;
 }
 
-.services-menu a:active{
-  color: var(--basic-gulf-blue)
+.services-menu a:hover {
+  background-color: var(--basic-dark-blue);
+}
+
+.services-menu a:active,
+.services-menu a:focus {
+  color: var(--basic-gulf-blue);
+  background-color: var(--basic-white);
+  box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
 }
 
 .services-menu-list {
@@ -717,6 +859,7 @@ a.user-cabinet {
 
 .services-menu-list h4 {
   margin: 0;
+  /* margin-top: -20px; */
   font-size: 36px;
   line-height: 24px;
   font-weight: normal;
@@ -835,6 +978,11 @@ a.user-cabinet {
 }
 /* Стили каталога/Фильтры*/
 
+.manufacturer-list-filter {
+  margin: 0;
+  padding: 0;
+}
+
 .catalog-filter {
   text-transform: uppercase;
 }
@@ -934,8 +1082,6 @@ a.user-cabinet {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 220px;
-  height: auto;
   font-family: "PT Sans","Arial", sans-serif;
   list-style: none;
   border: 1px solid var(--border-catalog);
@@ -946,6 +1092,10 @@ a.user-cabinet {
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
+  text-align: center;
+}
+
+.item-button {
   text-align: center;
 }
 
