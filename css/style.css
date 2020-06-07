@@ -1139,6 +1139,81 @@ a.control-current {
   line-height: 19px;
 }
 
+.manufacturer-item-filter label,
+.power-supply-item label {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 35px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.power-supply-list {
+  margin: 0;
+  padding: 0;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  border: 3px solid var(--basic-gray);
+  border-radius: 3px;
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 27px;
+  height: 23px;
+  /*Пока вставил картинку*/
+  background-image: url(../img/icon/checkbox-on.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border: 5px solid var(--basic-gray);
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--basic-gray);
+  border-radius: 50%;
+}
+
+.filter-input-radio:hover + label::before,
+.filter-input-radio:hover + label::after,
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:hover + label::after {
+  border-color: #b5b5b5;
+}
+
+.filter-input-radio:active + label::before,
+.filter-input-radio:active + label::after,
+.filter-input-checkbox:active + label::before,
+.filter-input-checkbox:active + label::after {
+  opacity: 0.3;
+}
+
 /* Стили каталога/Сортировка*/
 
 .catalog-sorting {
