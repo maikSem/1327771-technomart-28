@@ -15,29 +15,33 @@
     <div class="box-header-wrapper">
       <div class="container">
         <div class="box-header">
-          <a class="header-logo">ТЕХНОМАРТ</a>
+          <a class="header-logo"><img src="img/icon/icon-technomart-logo-header.svg" alt="На главную"></a>
           <label><input type="search" name="search" placeholder="Поиск:"></label>
-          <a href="" class="header-marker"><span>Закладки</a>
-          <a href="" class="header-basket">Корзина</a>
-          <a href="" class="header-order">Оформить заказ</a>
+          <div class="header-list">
+            <ul>
+              <li><a href="#" class="header-marker">Закладки</a></li>
+              <li><a href="#" class="header-basket">Корзина</a></li>
+              <li><a href="#" class="header-order">Оформить заказ</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="main-header">
-        <div class="main-header-title">
-          <h1>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
-        </div>
+        <h1>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
         <div class="main-header-contact">
-          <p>+7 (812) 555-05-55</p>
-          <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 *</p>
+          <p class="number-phone">+7 (812) 555-05-55</p>
+          <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 *</p>
         </div>
-        <div class="user-navigation">
+        <div class="authorized-user">
           <div class="user-name">
             <p>Равшан Джамшутович</p>
           </div>
-          <a href="" class="user-order">Мои заказы</a>
-          <a href="" class="user-cabinet">Личный кабинет</a>
+          <div class="user-links">
+            <a href="" class="user-order">Мои заказы</a>
+            <a href="" class="user-cabinet">Личный кабинет</a>
+          </div>
         </div>
       </div>
       <nav class="main-navigation">
@@ -81,25 +85,27 @@
           </fieldset>
           <fieldset class="filter-manufacturer">
             <legend>Производители:</legend>
-            <ul class="manufacturer-list">
-              <li>
-                <input type="checkbox" name="bosch" id="filter-bosch" />
+            <ul class="manufacturer-list-filter">
+              <li class="manufacturer-item-filter">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" />
                 <label for="filter-bosch">Bosch</label>
               </li>
-              <li>
-                <input type="checkbox" name="interscol" id="filter-interscol" />
+              <li class="manufacturer-item-filter">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="interscol"
+                  id="filter-interscol" />
                 <label for="filter-interscol">Интерскол</label>
               </li>
-              <li>
-                <input type="checkbox" name="makita" id="filter-makita" />
+              <li class="manufacturer-item-filter">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" />
                 <label for="filter-makita">Makita</label>
               </li>
-              <li>
-                <input type="checkbox" name="dewalt" id="filter-dewalt" />
+              <li class="manufacturer-item-filter">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt" />
                 <label for="filter-dewalt">Dewalt</label>
               </li>
-              <li>
-                <input type="checkbox" name="hitachi" id="filter-hitachi" />
+              <li class="manufacturer-item-filter">
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hitachi"
+                  id="filter-hitachi" />
                 <label for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
@@ -107,12 +113,14 @@
           <fieldset class="filter-power-supply">
             <legend>Питание:</legend>
             <ul class="power-supply-list">
-              <li>
-                <input type="radio" name="power-supply" value="battery" id="filter-battery" />
+              <li class="power-supply-item">
+                <input class="visually-hidden filter-input-radio" type="radio" name="power-supply" value="battery"
+                  id="filter-battery" />
                 <label for="filter-battery">Аккумуляторные</label>
               </li>
-              <li>
-                <input type="radio" name="power-supply" value="network" id="filter-network" />
+              <li class="power-supply-item">
+                <input class="visually-hidden filter-input-radio" type="radio" name="power-supply" value="network"
+                  id="filter-network" />
                 <label for="filter-network">Сетевые</label>
               </li>
             </ul>
@@ -125,20 +133,26 @@
         <section class="catalog-sorting">
           <h3>Cортировка:</h3>
           <ul class="sorting-list">
-            <li>
-              <a href="">По цене</a>
+            <li class="sorting-price">
+              <a href="#">По цене</a>
             </li>
-            <li>
-              <a href="">По типу</a>
+            <li class="sorting-tip">
+              <a href="#">По типу</a>
             </li>
-            <li>
+            <li class="sorting-function">
               <a href="">По функционалу</a>
             </li>
-            <li>
-              <a href="" class="button-up" aria-label="Сортировать по возрастанию">Стрелка вверх</a>
+            <li class="button-up">
+              <a href="#" aria-label="Сортировать по возрастанию"><svg width="12" height="10" viewBox="0 0 12 10"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5" />
+                </svg></a>
             </li>
-            <li>
-              <a href="" class="button-up" aria-label="Сортировать по убыванию">Стрелка вниз</a>
+            <li class="button-down">
+              <a href="#" aria-label="Сортировать по убыванию"><svg width="12" height="10" viewBox="0 0 12 10"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5" />
+                </svg></a>
             </li>
           </ul>
         </section>
@@ -155,6 +169,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
+              <p class="new-item">New</p>
             </li>
             <li class="product-item">
               <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
@@ -165,6 +180,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
+              <p class="new-item">New</p>
             </li>
             <li class="product-item">
               <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
@@ -175,6 +191,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
+              <p class="new-item">New</p>
             </li>
             <li class="product-item">
               <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 3000" />
@@ -185,6 +202,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
+              <p class="new-item">New</p>
             </li>
             <li class="product-item">
               <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
@@ -195,6 +213,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
+              <p class="new-item">New</p>
             </li>
             <li class="product-item">
               <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 2000" />
@@ -205,6 +224,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
+              <p class="new-item">New</p>
             </li>
             <li class="product-item">
               <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 3000" />
@@ -215,6 +235,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
+              <p class="new-item">New</p>
             </li>
             <li class="product-item">
               <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
@@ -225,6 +246,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
+              <p class="new-item">New</p>
             </li>
             <li class="product-item">
               <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 2000" />
@@ -235,6 +257,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
+              <p class="new-item">New</p>
             </li>
           </ul>
         </section>
@@ -279,11 +302,14 @@
     <div class="footer-box-wrapper">
       <div class="container">
         <div class="footer-box">
-          <div class="footer-logo">
-            <a href="">ТЕХНОМАРТ</a>
-          </div>
-          <div class="footer-address">
-            <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
+          <div class="footer-left">
+            <div class="footer-logo">
+              <a href="index.html"><img src="img/icon/icon-technomart-logo.svg" width="138" height="23"
+                  alt="На главную"></a>
+            </div>
+            <div class="footer-address">
+              <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br> +7 (812) 555-05-55</p>
+            </div>
           </div>
           <div class="footer-site-navigation">
             <ul class="footer-navigation-top">
@@ -303,25 +329,22 @@
         </div>
       </div>
     </div>
-
     <div class="container">
       <div class="footer-copyright">
         <p>© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
         <ul class="social">
-          <li><a href="" class="social-button" aria-label="Мы Вконтакте"><img src="img/icon/icon-vk.svg" width="26px"
-                height="15px"></a></li>
-          <li><a href="" class="social-button" aria-label="Мы в Фейсбуке"><img src="img/icon/icon-fb.svg" width="12px"
-                height="22px"></a></li>
-          <li><a href="" class="social-button" aria-label="Мы в инстаграм"><img src="img/icon/icon-insta.svg"
-                width="21px" height="21px"></a></li>
+          <li><a href="#" class="social-button" aria-label="Мы Вконтакте"><img src="img/icon/icon-vk.svg" width="26"
+                height="15"></a></li>
+          <li><a href="#" class="social-button" aria-label="Мы в Фейсбуке"><img src="img/icon/icon-fb.svg" width="12"
+                height="22"></a></li>
+          <li><a href="#" class="social-button" aria-label="Мы в инстаграм"><img src="img/icon/icon-insta.svg"
+                width="21" height="21"></a></li>
         </ul>
         <div class="feedback-email">
-          <p>Обратная связь:</p>
-          <a href="">mail@htmlacademy.ru</a>
+          <p>Обратная связь:<br><span><a href="#">mail@htmlacademy.ru</a></span></p>
         </div>
         <div class="footer-developer">
-          <p>Разработано -</p>
-          <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+          <p>Разработано -<br><span><a href="https://htmlacademy.ru">htmlacademy.ru</a></span></p>
         </div>
       </div>
     </div>
