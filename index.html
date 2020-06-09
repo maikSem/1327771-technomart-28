@@ -240,28 +240,28 @@
         <a href="#" class="link-button map-button">Заблудились? Напишите нам!</a>
       </div>
       <section class="modal-form">
-        <h2 class="visually-hidden">Форма обратной связи</h2> <!-- Скрытый заголовок-->
-        <div class="feedback-form">
-          <form action="https://echo.htmlacademy.ru" method="get">
-            <p>
-              <label>Ваше имя:
-                <input type="text" name="Name" placeholder="Имя Фамилия">
-              </label>
-            </p>
-            <p>
-              <label>Ваш e-mail:
-                <input type="email" name="Email" placeholder="email@example.com">
-              </label>
-            </p>
-            <p>
-              <label for="text-letter">Текст письма:</label>
-              <textarea name="text-letter" id="text-letter" cols="30" rows="10"
-                placeholder="В свободной форме"></textarea>
-            </p>
-            <button type="submit" class="link-button">Оформить заказ</button>
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
+          <p class="feedback-item">
+            <label>Ваше имя:
+              <input type="text" name="Name" placeholder="Имя Фамилия">
+            </label>
+          </p>
+          <p class="feedback-item">
+            <label>Ваш e-mail:
+              <input type="email" name="Email" placeholder="email@example.com">
+            </label>
+          </p>
+          <p class="feedback-item">
+            <label for="text-letter">Текст письма:</label>
+            <textarea name="text-letter" id="text-letter" cols="30" rows="10"
+              placeholder="В свободной форме"></textarea>
+          </p>
+          <div class="feedback-buttons">
+            <button type="submit" class="link-button">Отправить</button>
             <button type="button" class="button-close">x</button>
-          </form>
-        </div>
+          </div>
+        </form>
       </section>
       <section class="modal-card">
         <h2 class="visually-hidden">Карта google-map</h2> <!-- Скрытый заголовок-->

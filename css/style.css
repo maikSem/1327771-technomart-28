@@ -1304,7 +1304,7 @@ a.control-current {
   border: none;
 }
 
-.button-up a:hover svg,
+.button-up a:hover,
 .button-down a:hover {
   border: none;
 }
@@ -1596,7 +1596,57 @@ footer {
 /* Модальные окна*/
 
 .modal-form {
-  display: none;
+  position: absolute;
+  width: 620px;
+  background-color: var(--basic-white);
+}
+
+.feedback-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feedback-item {
+  margin: 0;
+  padding: 0;
+  width: 220px;
+  outline: 5px solid red;
+}
+
+.feedback-item:nth-child(1) {
+  margin-top: 46px;
+  margin-left: 81px;
+}
+
+.feedback-item:nth-child(2) {
+  margin-top: 46px;
+  margin-right: 81px;
+}
+
+.feedback-item:nth-child(3) {
+  width: 460px;
+  margin-top: 13px;
+  margin-left: 81px;
+}
+
+.feedback-buttons {
+  width: 100%;
+}
+
+.feedback-buttons button[type="submit"] {
+  width: 100%;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.feedback-item label {
+  display: block;
+}
+
+.feedback-item input {
+  display: block;
+  width: 100%;
 }
 
 .modal-card {
