@@ -15,15 +15,21 @@
     <div class="box-header-wrapper">
       <div class="container">
         <div class="box-header">
-          <a class="header-logo"><img src="img/icon/icon-technomart-logo-header.svg" alt="На главную"></a>
-          <label><input type="search" name="search" placeholder="Поиск:"></label>
-          <div class="header-list">
-            <ul>
-              <li><a href="#" class="header-marker">Закладки</a></li>
-              <li><a href="#" class="header-basket">Корзина</a></li>
-              <li><a href="#" class="header-order">Оформить заказ</a></li>
-            </ul>
-          </div>
+          <a class="header-logo"><img src="img/icon/icon-technomart-logo-header.svg" width="108" height="18"
+              alt="На главную"></a>
+          <label class="header-search">
+            <input type="search" name="search" placeholder="Поиск:">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="search-icon" fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
+                fill="white" />
+            </svg>
+          </label>
+          <ul class="header-list">
+            <li><a href="#" class="header-marker">Закладки</a></li>
+            <li><a href="#" class="header-basket">Корзина</a></li>
+            <li><a href="#" class="header-order">Оформить заказ</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -32,27 +38,38 @@
         <h1>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
         <div class="main-header-contact">
           <p class="number-phone">+7 (812) 555-05-55</p>
-          <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 *</p>
+          <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 * </p>
         </div>
         <div class="authorized-user">
           <div class="user-name">
-            <p>Равшан Джамшутович</p>
+            <p><span class="user-icon"><svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.881 14.666C15.737 13.931 13.625 13 12.674 12.276C12.017 11.775 11.904 10.658 12.157 9.861C13.275 8.958 14.021 7.384 14.021 5.583C14.021 2.776 12.221 0.5 10 0.5C7.77902 0.5 5.97901 2.776 5.97901 5.583C5.97901 7.384 6.72501 8.957 7.84201 9.86C8.09501 10.658 7.98302 11.775 7.32502 12.276C6.37502 13 4.26201 13.93 2.11801 14.666C-0.0259852 15.402 1.48343e-05 18.5 1.48343e-05 18.5H20C20 18.5 20.025 15.401 17.881 14.666Z"
+                    fill="#C5C5C5" />
+                </svg></span>Равшан Джамшутович<span class="logout-icon"><svg width="20" height="18" viewBox="0 0 20 18"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 9L11.125 0.5V6.5H5.125V11.5H11.125V17.5L20 9Z" fill="#C5C5C5" />
+                  <path
+                    d="M2.10601 14.452V3.548C2.12401 3.172 2.27701 2.491 3.11601 2.491H8.14301V0.5H3.11601C0.938006 0.5 0.112006 2.31 0.0870056 3.527V14.473C0.112006 15.689 0.938006 17.5 3.11601 17.5H8.14301V15.51H3.11601C2.27701 15.51 2.12401 14.827 2.10601 14.452Z"
+                    fill="#C5C5C5" />
+                </svg></span></p>
           </div>
           <div class="user-links">
-            <a href="" class="user-order">Мои заказы</a>
-            <a href="" class="user-cabinet">Личный кабинет</a>
+            <a href="#" class="user-order">Мои заказы</a>
+            <a class="my-room" href="#" class="user-cabinet">Личный кабинет</a>
           </div>
         </div>
       </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li><a href="index.html">Главная</a></li>
-          <li><a href="">Компания</a></li>
+          <li><a href="#">Компания</a></li>
           <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Спецпредложения</a></li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Контакты</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Спецпредложения</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -61,16 +78,18 @@
     <section class="catalog">
       <section class="breadcrumbs">
         <ul class="breadcrumbs-list">
-          <li>
+          <li class="breadcrumbs-item">
             <a href="index.html" aria-label="На главную"><img src="img/icon/icon-home.svg" /></a>
           </li>
-          <li>
+          <li class="breadcrumbs-item">
             <a href="catalog.html">Каталог</a>
           </li>
-          <li>
-            <a href="">Инструмент</a>
+          <li class="breadcrumbs-item">
+            <a href="#">Инструмент</a>
           </li>
-          <li><a href="">Перфораторы</a></li>
+          <li class="breadcrumbs-item">
+            <a href="#">Перфораторы</a>
+          </li>
         </ul>
       </section>
       <section class="catalog-title">
@@ -161,7 +180,9 @@
           <!-- Скрытый заголовок-->
           <ul class="product-list">
             <li class="product-item">
-              <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
+              <div class="item-wrapper">
+                <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
+              </div>
               <h4>Перфоратор BOSCH<br />BFG 6000</h4>
               <p class="old-price">30500 Р.</p>
               <p class="new-price">25500 Р.</p>
@@ -172,7 +193,9 @@
               <p class="new-item">New</p>
             </li>
             <li class="product-item">
-              <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
+              <div class="item-wrapper">
+                <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
+              </div>
               <h4>Перфоратор BOSCH<br />BFG 6000</h4>
               <p class="old-price">30500 Р.</p>
               <p class="new-price">25500 Р.</p>
@@ -183,7 +206,9 @@
               <p class="new-item">New</p>
             </li>
             <li class="product-item">
-              <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
+              <div class="item-wrapper">
+                <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
+              </div>
               <h4>Перфоратор BOSCH<br />BFG 6000</h4>
               <p class="old-price">30500 Р.</p>
               <p class="new-price">25500 Р.</p>
@@ -194,7 +219,9 @@
               <p class="new-item">New</p>
             </li>
             <li class="product-item">
-              <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 3000" />
+              <div class="item-wrapper">
+                <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 3000" />
+              </div>
               <h4>Перфоратор BOSCH<br />BFG 3000</h4>
               <p class="old-price">22500 Р.</p>
               <p class="new-price">15500 Р.</p>
@@ -205,7 +232,9 @@
               <p class="new-item">New</p>
             </li>
             <li class="product-item">
-              <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
+              <div class="item-wrapper">
+                <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
+              </div>
               <h4>Перфоратор BOSCH<br />BFG 6000</h4>
               <p class="old-price">30500 Р.</p>
               <p class="new-price">25500 Р.</p>
@@ -216,7 +245,9 @@
               <p class="new-item">New</p>
             </li>
             <li class="product-item">
-              <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 2000" />
+              <div class="item-wrapper">
+                <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 2000" />
+              </div>
               <h4>Перфоратор BOSCH<br />BFG 2000</h4>
               <p class="old-price"></p>
               <p class="new-price">12500 Р.</p>
@@ -227,7 +258,9 @@
               <p class="new-item">New</p>
             </li>
             <li class="product-item">
-              <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 3000" />
+              <div class="item-wrapper">
+                <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 3000" />
+              </div>
               <h4>Перфоратор BOSCH<br />BFG 3000</h4>
               <p class="old-price">22500 Р.</p>
               <p class="new-price">15500 Р.</p>
@@ -238,7 +271,9 @@
               <p class="new-item">New</p>
             </li>
             <li class="product-item">
-              <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
+              <div class="item-wrapper">
+                <img src="img/hummer-drill-bfg6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000" />
+              </div>
               <h4>Перфоратор BOSCH<br />BFG 6000</h4>
               <p class="old-price">30500 Р.</p>
               <p class="new-price">25500 Р.</p>
@@ -249,7 +284,9 @@
               <p class="new-item">New</p>
             </li>
             <li class="product-item">
-              <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 2000" />
+              <div class="item-wrapper">
+                <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 2000" />
+              </div>
               <h4>Перфоратор BOSCH<br />BFG 2000</h4>
               <p class="old-price"></p>
               <p class="new-price">12500 Р.</p>
@@ -264,7 +301,7 @@
       </section>
       <ul class="catalog-navigation">
         <li>
-          <a href="" class="button-navigation" aria-label="На первую страницу каталога">1</a>
+          <a href="" class="button-navigation button-current" aria-label="На первую страницу каталога">1</a>
         </li>
         <li>
           <a href="" class="button-navigation" aria-label="На вторую страницу каталога">2</a>
