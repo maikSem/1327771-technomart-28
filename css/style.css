@@ -1154,9 +1154,25 @@ a.control-current {
 }
 /* Стили каталога/Фильтры*/
 
+.filter-manufacturer {
+  margin: 0;
+  margin-top: 18px;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid var(--basic-gray);
+}
+
+.filter-power-supply {
+  margin: 0;
+  padding: 0;
+  margin-top: 18px;
+  border: none;
+}
+
 .manufacturer-list-filter {
   margin: 0;
   padding: 0;
+  padding-top: 15px;
 }
 
 .catalog-filter {
@@ -1176,9 +1192,9 @@ a.control-current {
   list-style: none;
 }
 
-.catalog-filter fieldset {
+/* .catalog-filter fieldset {
   border: none;
-}
+} */
 
 .catalog-filter legend {
   font-size: 17px;
@@ -1204,6 +1220,8 @@ a.control-current {
 .power-supply-list {
   margin: 0;
   padding: 0;
+  padding-top: 20px;
+  padding-bottom: 35px;
 }
 
 .filter-input-checkbox + label::before {
@@ -1264,6 +1282,81 @@ a.control-current {
 .filter-input-checkbox:active + label::before,
 .filter-input-checkbox:active + label::after {
   opacity: 0.3;
+}
+
+/* Диапозон цены*/
+
+.filter-price {
+  margin: 0;
+  margin-top: 15px;
+  padding: 0;
+  padding-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid var(--basic-gray);
+}
+
+.range-filter {
+  margin-top: 11px;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 9px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--basic-light-grayish);
+  border-radius: 5px;
+  box-sizing: content-box;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background-color: #D7DCDE;
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 29px;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+} 
+
+.price-controls {
+  display: flex;
+}
+
+.price-controls input {
+  width: 95px;
+  padding: 10px 24px;
+  background-color: var(--basic-light-grayish);
+  border: none;
+  border-radius: 5px;
+}
+
+.price-controls p {
+  width: 30px;
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #444444;
 }
 
 /* Стили каталога/Сортировка*/
@@ -1356,7 +1449,6 @@ a.control-current {
   margin-left: 20px;
 }
  
-
 .product-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
