@@ -323,30 +323,48 @@
       <section class="modal-form">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="get">
-          <p class="feedback-item">
-            <label>Ваше имя:
-              <input type="text" name="Name" placeholder="Имя Фамилия">
-            </label>
-          </p>
-          <p class="feedback-item">
-            <label>Ваш e-mail:
-              <input type="email" name="Email" placeholder="email@example.com">
-            </label>
-          </p>
-          <p class="feedback-item">
-            <label for="text-letter">Текст письма:</label>
-            <textarea name="text-letter" id="text-letter" cols="61" rows="6" placeholder="В свободной форме"></textarea>
-          </p>
+          <div class="feedback-wrapper">
+            <p class="feedback-item">
+              <label>Ваше имя:
+                <input type="text" name="Name" placeholder="Имя Фамилия">
+              </label>
+            </p>
+            <p class="feedback-item">
+              <label>Ваш e-mail:
+                <input type="email" name="Email" placeholder="email@example.com">
+              </label>
+            </p>
+            <p class="feedback-item">
+              <label for="text-letter">Текст письма:</label>
+              <textarea name="text-letter" id="text-letter" cols="1" rows="6"
+                placeholder="В свободной форме"></textarea>
+            </p>
+          </div>
           <div class="feedback-buttons">
             <button type="submit" class="link-button">Отправить</button>
           </div>
-          <button type="button" class="button-close">x</button>
+          <button type="button" class="button-close" aria-label="Закрыть">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
+                fill="#EE3643" />
+            </svg>
+          </button>
         </form>
       </section>
-      <section class="modal-card">
+      <section class="modal-map">
         <h2 class="visually-hidden">Карта google-map</h2> <!-- Скрытый заголовок-->
-        <div>Карта</div>
-        <button type="button" class="button-close" aria-label="Закрыть форму">x</button>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+          width="943" height="449" allowfullscreen
+          title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+        <button type="button" class="button-close" aria-label="Закрыть">
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
+              fill="#EE3643" />
+          </svg>
+        </button>
       </section>
     </section>
   </main>
