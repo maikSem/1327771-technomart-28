@@ -100,7 +100,46 @@
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="filter-price">
             <legend>Цена:</legend>
-            <input type="range" name="price" id="price" min="0" max="300" />
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                  <svg class="toggle toggle-min" tabindex="0" width="20" height="22" viewBox="0 0 20 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3"
+                      d="M10 20C4.477 20 0 15.522 0 10V12C0 17.522 4.477 22 10 22C15.522 22 20 17.522 20 12V10C20 15.522 15.522 20 10 20Z"
+                      fill="#ABABAB" />
+                    <path
+                      d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
+                      fill="white" />
+                    <path
+                      d="M10 12C11.1046 12 12 11.1046 12 10C12 8.89543 11.1046 8 10 8C8.89543 8 8 8.89543 8 10C8 11.1046 8.89543 12 10 12Z"
+                      fill="#ABABAB" />
+                  </svg>
+                  <svg class="toggle toggle-max" tabindex="0" width="20" height="22" viewBox="0 0 20 22" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.3"
+                      d="M10 20C4.477 20 0 15.522 0 10V12C0 17.522 4.477 22 10 22C15.522 22 20 17.522 20 12V10C20 15.522 15.522 20 10 20Z"
+                      fill="#ABABAB" />
+                    <path
+                      d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
+                      fill="white" />
+                    <path
+                      d="M10 12C11.1046 12 12 11.1046 12 10C12 8.89543 11.1046 8 10 8C8.89543 8 8 8.89543 8 10C8 11.1046 8.89543 12 10 12Z"
+                      fill="#ABABAB" />
+                  </svg>
+                </div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  <input type="number" name="min-price" value="0">
+                </label>
+                <p>—</p>
+                <label class="max-price">
+                  <input type="number" name="max-price" value="30000">
+                </label>
+              </div>
+            </div>
           </fieldset>
           <fieldset class="filter-manufacturer">
             <legend>Производители:</legend>
@@ -190,7 +229,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
-              <p class="new-item">New</p>
+              <p class="new-element">New</p>
             </li>
             <li class="product-item">
               <div class="item-wrapper">
@@ -203,7 +242,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
-              <p class="new-item">New</p>
+              <p class="new-element">New</p>
             </li>
             <li class="product-item">
               <div class="item-wrapper">
@@ -216,7 +255,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
-              <p class="new-item">New</p>
+              <p class="new-element new-current">New</p>
             </li>
             <li class="product-item">
               <div class="item-wrapper">
@@ -229,7 +268,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
-              <p class="new-item">New</p>
+              <p class="new-element new-current">New</p>
             </li>
             <li class="product-item">
               <div class="item-wrapper">
@@ -242,7 +281,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
-              <p class="new-item">New</p>
+              <p class="new-element">New</p>
             </li>
             <li class="product-item">
               <div class="item-wrapper">
@@ -255,7 +294,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
-              <p class="new-item">New</p>
+              <p class="new-element new-current">New</p>
             </li>
             <li class="product-item">
               <div class="item-wrapper">
@@ -268,7 +307,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
-              <p class="new-item">New</p>
+              <p class="new-element new-current">New</p>
             </li>
             <li class="product-item">
               <div class="item-wrapper">
@@ -281,7 +320,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
-              <p class="new-item">New</p>
+              <p class="new-element">New</p>
             </li>
             <li class="product-item">
               <div class="item-wrapper">
@@ -294,7 +333,7 @@
                 <button type="button" class="button-buy">Купить</button>
                 <button type="button" class="button-marker">В закладки</button>
               </div>
-              <p class="new-item">New</p>
+              <p class="new-element new-current">New</p>
             </li>
           </ul>
         </section>
@@ -329,10 +368,26 @@
     <section class="catalog-basket">
       <h2 class="visually-hidden">Корзина</h2>
       <!-- Скрытый заголовок-->
+      <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M33 66C51.2254 66 66 51.2254 66 33C66 14.7746 51.2254 0 33 0C14.7746 0 0 14.7746 0 33C0 51.2254 14.7746 66 33 66Z"
+          fill="#63A63E" />
+        <path
+          d="M49.641 21.066C49.2498 20.6773 48.6181 20.6773 48.227 21.066L29.788 39.504C29.3968 39.8928 28.7651 39.8928 28.374 39.504L20.234 31.365C19.8428 30.9763 19.2111 30.9763 18.82 31.365L15.285 34.9C14.8962 35.2912 14.8962 35.9228 15.285 36.314L28.374 49.404C28.7651 49.7928 29.3968 49.7928 29.788 49.404L33.324 45.868L34.738 44.454L53.176 26.016C53.5647 25.6248 53.5647 24.9932 53.176 24.602L49.641 21.066Z"
+          fill="white" />
+      </svg>
       <p>Товар добавлен в корзину</p>
-      <a href="" class="link-button">Оформить заказ</a>
-      <a href="" class="button-basket">Продолжить покупки</a>
-      <button type="button" aria-label="Закрыть корзину" class="button-close">x</button>
+      <div class="basket-wrapper">
+        <a href="" class="link-button">Оформить заказ</a>
+        <a href="" class="button-basket">Продолжить покупки</a>
+      </div>
+      <button type="button" aria-label="Закрыть корзину" class="button-close">
+        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
+            fill="#EE3643" />
+        </svg>
+      </button>
     </section>
   </main>
   <footer>
