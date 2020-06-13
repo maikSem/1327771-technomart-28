@@ -1821,11 +1821,14 @@ footer {
 
 /* Модальные окна*/
 
+/* Форма обратной связи*/
 .modal-form {
-  display: none;
+  display: block;
   position: fixed;
-  top: 25%;
-  left: 25%;
+  top: 40%;
+  right: 0;
+  left: 0;
+  margin: auto;
   width: 620px;
   background-color: var(--basic-white);
   border-top: 7px solid var(--basic-red);
@@ -1918,10 +1921,12 @@ footer {
 /* Карта*/
 
 .modal-map {
-  position: fixed;
   display: block;
+  position: fixed;
   top: 30%;
-  left: 30%;
+  right: 0;
+  left: 0;
+  margin: auto;
   width: 943px;
   height: 449px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -1935,4 +1940,60 @@ footer {
 
 .catalog-basket {
   display: block;
+  position: fixed;
+  top: 40%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 620px;
+  background-color: var(--basic-white);
+  border-top: 7px solid var(--basic-red);
+}
+
+.catalog-basket p {
+  margin: 0;
+  padding: 67px 99px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.catalog-basket > svg {
+  position: absolute;
+  top: 48px;
+  left: 81px;
+}
+
+.catalog-basket .button-close {
+  top: 11px;
+}
+
+.basket-wrapper {
+  padding: 37px 113px;
+  background-color: #F1F1F1;
+  text-align: center;
+}
+
+.basket-wrapper a {
+  margin: 0;
+}
+
+.basket-wrapper .link-button {
+  padding: 10px 47px;
+}
+
+.basket-wrapper .button-basket {
+  display: inline-block;
+  margin-left: 3px;
+  padding: 10px 31px;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.basket-wrapper .button-basket:hover {
+  color: var(--basic-gray)
 }
