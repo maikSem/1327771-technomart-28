@@ -4,8 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap"
+    rel="stylesheet"> -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -38,7 +40,7 @@
         <h1>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
         <div class="main-header-contact">
           <p class="number-phone">+7 (812) 555-05-55</p>
-          <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 * </p>
+          <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="user-navigation">
           <a href="#" class="login">Войти</a>
@@ -281,12 +283,12 @@
           <div class="feedback-wrapper">
             <p class="feedback-item">
               <label>Ваше имя:
-                <input type="text" name="Name" placeholder="Имя Фамилия">
+                <input class="feedback-login" type="text" name="Name" placeholder="Имя Фамилия" />
               </label>
             </p>
             <p class="feedback-item">
               <label>Ваш e-mail:
-                <input type="email" name="Email" placeholder="email@example.com">
+                <input class="feedback-form-email" type="email" name="Email" placeholder="email@example.com" />
               </label>
             </p>
             <p class="feedback-item">
@@ -374,6 +376,7 @@
       </div>
     </div>
   </footer>
+  <script src="feedback_form.js"></script>
 </body>
 
 </html>

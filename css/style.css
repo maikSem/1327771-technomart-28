@@ -7,6 +7,8 @@
     url("../fonts/cuprum-v11-latin_cyrillic-regular.woff") format("woff");
 }
 
+/* Добавить Italic*/
+
 @font-face {
   font-family: "Cuprum";
   font-style: normal;
@@ -329,14 +331,14 @@ cursor: pointer;
 
 .main-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   min-height: 158px;
 }
 
 .main-header h1 {
   margin: 0;
-  margin-left: 30px;
+  margin-right: 93px;
   font-size: 16px;
   line-height: 23px;
   font-weight: normal;
@@ -352,7 +354,7 @@ cursor: pointer;
   position: relative;
   margin: 0;
   margin-bottom: 3px;
-  padding: 4px 42px 4px 71px;
+  padding: 7px 42px 8px 71px;
   width: 270px;
   height: auto;
   font-size: 21px;
@@ -1873,6 +1875,7 @@ footer {
 /* Модальные окна*/
 
 /* Форма обратной связи*/
+
 .modal-form {
   display: none;
   position: fixed;
@@ -2048,3 +2051,54 @@ footer {
 .basket-wrapper .button-basket:hover {
   color: var(--basic-gray)
 }
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+/* Анимация */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+};
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+};
