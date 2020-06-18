@@ -4,10 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap"
-    rel="stylesheet"> -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -49,13 +48,13 @@
       </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="navigation-item"><a href="index.html">Главная</a></li>
+          <li class="navigation-item"><a href="#">Компания</a></li>
+          <li class="navigation-item"><a href="catalog.html">Каталог</a></li>
+          <li class="navigation-item"><a href="#">Новости</a></li>
+          <li class="navigation-item"><a href="#">Спецпредложения</a></li>
+          <li class="navigation-item"><a href="#">Доставка</a></li>
+          <li class="navigation-item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -81,12 +80,12 @@
         </li>
         <li class="catalog-menu-item features-slider">
           <ul class="features-slider-list">
-            <li class="features-slider-item  hummer-drill">
+            <li class="features-slider-item  hummer-drill slide-current">
               <h3>Перфораторы</h3>
               <p>Настоящие мужские игрушки</p>
               <a href="catalog.html" class="link-button hummer-drill-button">Открыть каталог</a>
             </li>
-            <li class=" features-slider-item  screwd-river slide-current">
+            <li class=" features-slider-item  screwd-river">
               <h3>Дрели</h3>
               <p>Соседям на радость!</p>
               <a href="catalog.html" class="link-button screwd-river-button">Открыть каталог</a>
@@ -211,16 +210,16 @@
       <div class="services-slider container">
         <div class="services-title">
           <h3>Сервисы</h3>
-          <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
-          <p> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
         <div class="services-slider-controls">
           <ul class="control-list">
             <li class="control-item">
-              <a href="#">Доставка</a>
+              <a class="control-current" href="#">Доставка</a>
             </li>
             <li class="control-item">
-              <a class="control-current" href="#">Гарантия</a>
+              <a href="#">Гарантия</a>
             </li>
             <li class="control-item">
               <a href="#">Кредит</a>
@@ -231,8 +230,8 @@
           <li class="services-slide-item services-delivery slide-current">
             <h4>Доставка</h4>
             <p>Мы с удовольствием доставим ваш товар прямо<br>
-              к вашему подъезду совершенно бесплатно!</p>
-            <p>Ведь мы неплохо заработаем,<br>
+              к вашему подъезду совершенно бесплатно!<br>
+              Ведь мы неплохо заработаем,<br>
               поднимая его на ваш этаж!</p>
           </li>
           <li class="services-slide-item services-guarante">
@@ -256,7 +255,7 @@
     <section class="company-contact container">
       <h2 class="visually-hidden">О КОМПАНИИ и КОНТАКТЫ</h2> <!-- Скрытый заголовок-->
       <div class="company-title">
-        <h3>КОМПАНИЯ «ТЕХНОМАРТ»</h3>
+        <h3>Компания «Техномарт»</h3>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br> ремонта и строительства не оставит
           равнодушными любителей сэкономить на<br> гастарбайтерах.
         </p>
@@ -368,10 +367,10 @@
                 width="21" height="21" alt=""></a></li>
         </ul>
         <div class="feedback-email">
-          <p>Обратная связь:<br><span><a href="#">mail@htmlacademy.ru</a></span></p>
+          <p>Обратная связь:<br><a href="#">mail@htmlacademy.ru</a></p>
         </div>
         <div class="footer-developer">
-          <p>Разработано -<br><span><a href="https://htmlacademy.ru">htmlacademy.ru</a></span></p>
+          <p>Разработано -<br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
         </div>
       </div>
     </div>
