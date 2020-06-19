@@ -9,20 +9,20 @@
 
 @font-face {
   font-family: "Cuprum";
-  font-style: italic;
-  font-weight: 400;
-  src: local("Cuprum Italic"), local("Cuprum-Italic"),
-    url("../fonts/cuprum-v11-latin_cyrillic-italic.woff2") format("woff2"), 
-    url("../fonts/cuprum-v11-latin_cyrillic-italic.woff") format("woff"),
+  font-style: normal;
+  font-weight: 700;
+  src: local("Cuprum Bold"), local("Cuprum-Bold"),
+  url("../fonts/cuprum-v11-latin_cyrillic-700.woff2") format("woff2"),
+  url("../fonts/cuprum-v11-latin_cyrillic-700.woff") format("woff");
 }
 
 @font-face {
   font-family: "Cuprum";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Cuprum Bold"), local("Cuprum-Bold"),
-    url("../fonts/cuprum-v11-latin_cyrillic-700.woff2") format("woff2"),
-    url("../fonts/cuprum-v11-latin_cyrillic-700.woff") format("woff");
+  font-style: italic;
+  font-weight: normal;
+  src: local("Cuprum Italic"), local("Cuprum-Italic"),
+    url("../fonts/cuprum-v11-latin_cyrillic-italic.woff2") format("woff2"), 
+    url("../fonts/cuprum-v11-latin_cyrillic-italic.woff") format("woff"),
 }
 
 @font-face {
@@ -336,13 +336,14 @@ input[type="search"]:focus + * .search-icon {
   min-height: 158px;
 }
 
-.main-header h1 {
+.site-title {
   margin: 0;
+  margin-top: -3px;
   margin-right: 95px;
   width: 197px;
   font-style: italic;
   font-size: 16px;
-  line-height: 23px;
+  line-height: 24px;
   font-weight: normal;
   color: var(--basic-red);
 }
@@ -376,7 +377,7 @@ input[type="search"]:focus + * .search-icon {
   margin: 0;
   text-align: center;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 23px;
   color: var(--basic-gulf-blue);
 }
 
@@ -601,7 +602,7 @@ a.my-room {
 
 .features-catalog {
   margin-top: 59px;
-  margin-bottom: 58px;
+  margin-bottom: 59px;
 }
 
 .catalog-menu-list {
@@ -621,7 +622,7 @@ a.my-room {
 
 .catalog-menu-item h3 {
   margin: 0;
-  margin-top: 21px;
+  margin-top: 20px;
   margin-left: 23px;
   padding: 0;
   font-size: 24px;
@@ -631,7 +632,7 @@ a.my-room {
 }
 
 .catalog-menu-item a:not(.link-button) {
-  margin: 14px 0 20px 23px;
+  margin: 14px 0 21px 23px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -722,7 +723,6 @@ a.my-room {
 .features-slider-item {
   display: none;
   position: relative;
-  min-height: 266px;
 }
 
 .features-slider-item h3 {
@@ -737,7 +737,7 @@ a.my-room {
 
 .features-slider-item p {
   margin: 0;
-  padding-top: 5px;
+  padding-top: 6px;
   padding-left: 24px;
   font-size: 18px;
   line-height: 24px;
@@ -789,8 +789,7 @@ a.my-room {
 .hummer-drill-button,
 .screwd-river-button {
   display: inline-block;
-  margin-top: 113px;
-  margin-left: 24px;
+  margin: 113px 0 27px 24px;
   padding: 11px 46px 9px 46px;
 }
 
@@ -829,7 +828,7 @@ a.my-room {
 }
 
 .popular-product-title h3 {
-  margin: 30px 0px 30px 28px;
+  margin: 29px 0px 30px 28px;
 }
 
 .popular-button-product {
@@ -864,7 +863,7 @@ a.my-room {
 
 .popular-button-manufacturer {
   margin-right: 19px;
-  padding: 11px 40px 9px 37px;
+  padding: 11px 38px 9px 39px;
 }
 
 .manufacturer-list {
@@ -919,6 +918,7 @@ a.my-room {
   display: grid;
   grid-template-columns: 240px 1fr;
   align-content: start;
+  min-height: 522px;
 }
 
 .services-title {
@@ -931,12 +931,13 @@ a.my-room {
   margin-bottom: 70px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 24px;
+  line-height: 25px;
 }
 
 .control-list {
   position: relative;
   margin: 0;
+  margin-top: 3px;
   margin-bottom: 100px;
   padding: 0;
   list-style: none;
@@ -956,10 +957,9 @@ a.my-room {
 
 .control-item a {
   display: block;
-  min-height: 61px;
   width: 240px;
   margin: 0;
-  padding: 14px 0 18px 22px;
+  padding: 13px 0 18px 22px;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
@@ -1003,7 +1003,7 @@ a.control-current {
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 24px;
+  line-height: 25px;
 }
 
 .services-slide-item p:nth-child(2) {
@@ -1064,23 +1064,23 @@ a.control-current {
 .contact p {
   margin: 0;
   font-size: 13px;
-  line-height: 24px;
+  line-height: 25px;
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .company-title p:nth-child(3){
-  margin-top: 27px;
+  margin-top: 24px;
 }
 
 .contact p {
   margin-bottom: 32px;
   font-size: 13px;
-  line-height: 24px;
+  line-height: 25px;
 }
 
 .railway-carriers {
   margin: 0;
-  margin-top: 1px;
+  margin-top: 4px;
   margin-bottom: 20px;
   padding: 0;
   padding-left: 37px;
@@ -1110,7 +1110,7 @@ a.control-current {
 
 .map-button {
   display: block;
-  margin-top: 28px;
+  margin-top: 27px;
   padding: 10px 0;
 }
 
@@ -1777,7 +1777,7 @@ footer {
   margin: 0;
   margin-left: 2px;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 25px;
   color: #F3F7F9;
 }
 
@@ -1820,13 +1820,13 @@ footer {
 }
 
 .footer-navigation-bottom a:first-child {
-  margin-left: 24px;
+  margin-left: 23px;
 }
 
 .footer-navigation-top a,
 .footer-navigation-bottom a {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 25px;
   color: #F3F7F9;
 }
 
@@ -1853,7 +1853,7 @@ footer {
 .footer-copyright p {
   margin: 38px 0 34px 0;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 19px;
 } 
 
 .social {
