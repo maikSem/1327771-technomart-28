@@ -12,8 +12,8 @@
   font-style: italic;
   font-weight: 400;
   src: local('Cuprum Italic'), local('Cuprum-Italic'),
-       url('../fonts/cuprum-v11-latin_cyrillic-italic.woff2') format('woff2'), 
-       url('../fonts/cuprum-v11-latin_cyrillic-italic.woff') format('woff'),
+    url('../fonts/cuprum-v11-latin_cyrillic-italic.woff2') format('woff2'), 
+    url('../fonts/cuprum-v11-latin_cyrillic-italic.woff') format('woff'),
 }
 
 @font-face {
@@ -595,15 +595,6 @@ a.my-room {
   cursor: pointer;
 }
 
-.hummer-drill-button,
-.screwd-river-button {
-  position: absolute;
-  display: block;
-  left: 24px;
-  bottom: 27px;
-  padding: 11px 46px 9px 46px;
-}
-
 /* Стили основного содержимого */
 
 /* Стили основного содержимого/навигация по каталогу*/
@@ -651,6 +642,10 @@ a.my-room {
 .catalog-menu-item a:hover:not(.link-button){
   color: var(--basic-white);
   background-color: rgba(197, 197, 197, 0.3);
+}
+
+.catalog-menu-item a:active:not(.link-button) {
+  background-color: rgba(169, 169, 169, 0.3);
 }
 
 .materials,
@@ -731,10 +726,9 @@ a.my-room {
 }
 
 .features-slider-item h3 {
-  position: absolute;
-  left: 24px;
-  top: 23px;
   margin: 0;
+  padding-left: 24px;
+  padding-top: 23px;
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
@@ -742,10 +736,9 @@ a.my-room {
 }
 
 .features-slider-item p {
-  position: absolute;
-  left: 24px;
-  top: 64px;
   margin: 0;
+  padding-top: 5px;
+  padding-left: 24px;
   font-size: 18px;
   line-height: 24px;
   font-weight: normal;
@@ -777,8 +770,8 @@ a.my-room {
 
 .features-slider .button-arrow-left {
   position: absolute;
-  top: 122px;
-  left: 24px;
+  top: 120px;
+  left: 20px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -786,11 +779,19 @@ a.my-room {
 
 .features-slider .button-arrow-right {
   position: absolute;
-  top: 122px;
-  right: 20px;
+  top: 120px;
+  right: 15px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.hummer-drill-button,
+.screwd-river-button {
+  display: inline-block;
+  margin-top: 113px;
+  margin-left: 24px;
+  padding: 11px 46px 9px 46px;
 }
 
 .button-item-menu {
@@ -1516,7 +1517,7 @@ a.control-current {
   display: flex;
   position: relative;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   min-height: 318px;
   font-family: "PT Sans","Arial", sans-serif;
@@ -1547,8 +1548,8 @@ a.control-current {
 
 .product-item h4 {
   margin: 0;
-  margin-top: 15px;
-  margin-bottom: 7px;
+  /* margin-top: 15px;
+  margin-bottom: 7px; */
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
@@ -1602,6 +1603,10 @@ a.control-current {
   border-radius: 2px;
 }
 
+.price-hidden {
+  visibility: hidden;
+}
+
 .button-buy {
   position: relative;
   margin: 38px 43px 10px 40px;
@@ -1639,6 +1644,7 @@ a.control-current {
 }
 
 .button-marker {
+  margin-bottom: 20px;
   padding: 9px 32px 7px 31px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
