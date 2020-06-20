@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Техномарт</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -26,8 +27,8 @@
             </svg>
           </label>
           <ul class="header-list">
-            <li><a href="#" class="header-marker">Закладки</a></li>
-            <li><a href="#" class="header-basket">Корзина</a></li>
+            <li><a href="#" class="header-marker">Закладки: 0</a></li>
+            <li><a href="#" class="header-basket">Корзина: 0</a></li>
             <li><a href="#" class="header-order">Оформить заказ</a></li>
           </ul>
         </div>
@@ -35,10 +36,10 @@
     </div>
     <div class="container">
       <div class="main-header">
-        <h1>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
+        <h1 class="site-title">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
         <div class="main-header-contact">
           <p class="number-phone">+7 (812) 555-05-55</p>
-          <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 * </p>
+          <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="user-navigation">
           <a href="#" class="login">Войти</a>
@@ -47,13 +48,13 @@
       </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Спецпредложения</a></li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="navigation-item"><a href="index.html">Главная</a></li>
+          <li class="navigation-item"><a href="#">Компания</a></li>
+          <li class="navigation-item"><a href="catalog.html">Каталог</a></li>
+          <li class="navigation-item"><a href="#">Новости</a></li>
+          <li class="navigation-item"><a href="#">Спецпредложения</a></li>
+          <li class="navigation-item"><a href="#">Доставка</a></li>
+          <li class="navigation-item"><a href="#">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -79,21 +80,21 @@
         </li>
         <li class="catalog-menu-item features-slider">
           <ul class="features-slider-list">
-            <li class="features-slider-item  hummer-drill">
+            <li class="features-slider-item  hummer-drill slide-current">
               <h3>Перфораторы</h3>
               <p>Настоящие мужские игрушки</p>
               <a href="catalog.html" class="link-button hummer-drill-button">Открыть каталог</a>
             </li>
-            <li class=" features-slider-item  screwd-river slide-current">
+            <li class=" features-slider-item  screwd-river">
               <h3>Дрели</h3>
               <p>Соседям на радость!</p>
-              <a href="catalog.html" class="link-button screwd-river-button">Открыть каталог</a>
+              <a href="catalog.html" class="link-button screwd-river-button ">Открыть каталог</a>
             </li>
-            <div class="feature-slide-controls">
-              <button class="slide-current" type="button" aria-label="Первый слайд"></button>
-              <button type="button" aria-label="Второй слайд"></button>
-            </div>
           </ul>
+          <div class="feature-slide-controls">
+            <button class="slide-current" type="button" aria-label="Первый слайд"></button>
+            <button type="button" aria-label="Второй слайд"></button>
+          </div>
           <button class="button-arrow-left" type="button" aria-label="Предыдущий слайд">
             <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -173,7 +174,7 @@
               <img src="img/hummer-drill-bfg2000-3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 2000">
             </div>
             <h4>Перфоратор BOSCH<br> BFG 2000</h4>
-            <p class="old-price"></p>
+            <p class="old-price price-hidden">15500</p>
             <p class="new-price">12500 Р.</p>
             <div class="item-button">
               <button type="button" class="button-buy">Купить</button>
@@ -215,10 +216,10 @@
         <div class="services-slider-controls">
           <ul class="control-list">
             <li class="control-item">
-              <a href="#">Доставка</a>
+              <a class="control-current" href="#">Доставка</a>
             </li>
             <li class="control-item">
-              <a class="control-current" href="#">Гарантия</a>
+              <a href="#">Гарантия</a>
             </li>
             <li class="control-item">
               <a href="#">Кредит</a>
@@ -226,7 +227,7 @@
           </ul>
         </div>
         <ul class="services-slider-list">
-          <li class="services-slide-item services-delivery">
+          <li class="services-slide-item services-delivery slide-current">
             <h4>Доставка</h4>
             <p>Мы с удовольствием доставим ваш товар прямо<br>
               к вашему подъезду совершенно бесплатно!<br>
@@ -242,10 +243,10 @@
               Дом уж восстановите как-нибудь сами
             </p>
           </li>
-          <li class="services-slide-item  services-credit slide-current">
+          <li class="services-slide-item  services-credit">
             <h4>Кредит</h4>
-            <p>Залезть в долговую яму стало проще!<br>
-              Кредитные консультанты придут вам на помощь.</p>
+            <p>Залезть в долговую яму стало проще!</p>
+            <p>Кредитные консультанты придут вам на помощь.</p>
             <a href="#" class="link-button">Отправить заявку</a>
           </li>
         </ul>
@@ -254,14 +255,12 @@
     <section class="company-contact container">
       <h2 class="visually-hidden">О КОМПАНИИ и КОНТАКТЫ</h2> <!-- Скрытый заголовок-->
       <div class="company-title">
-        <h3>КОМПАНИЯ «ТЕХНОМАРТ»</h3>
+        <h3>Компания «Техномарт»</h3>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br> ремонта и строительства не оставит
           равнодушными любителей сэкономить на<br> гастарбайтерах.
         </p>
-        <p>
-          Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-          Техномарт работает со многими транспортными компаниями:
-        </p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России!</p>
+        <p>Техномарт работает со многими транспортными компаниями:</p>
         <ul class="railway-carriers">
           <li class="railway-item">Деловые линии</li>
           <li class="railway-item">Автотрейдинг</li>
@@ -283,12 +282,12 @@
           <div class="feedback-wrapper">
             <p class="feedback-item">
               <label>Ваше имя:
-                <input type="text" name="Name" placeholder="Имя Фамилия">
+                <input class="feedback-login" type="text" name="Name" placeholder="Имя Фамилия" />
               </label>
             </p>
             <p class="feedback-item">
               <label>Ваш e-mail:
-                <input type="email" name="Email" placeholder="email@example.com">
+                <input class="feedback-form-email" type="email" name="Email" placeholder="email@example.com" />
               </label>
             </p>
             <p class="feedback-item">
@@ -361,21 +360,22 @@
         <p>© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
         <ul class="social">
           <li><a href="#" class="social-button" aria-label="Мы Вконтакте"><img src="img/icon/icon-vk.svg" width="26"
-                height="15"></a></li>
+                height="15" alt=""></a></li>
           <li><a href="#" class="social-button" aria-label="Мы в Фейсбуке"><img src="img/icon/icon-fb.svg" width="12"
-                height="22"></a></li>
+                height="22" alt=""></a></li>
           <li><a href="#" class="social-button" aria-label="Мы в инстаграм"><img src="img/icon/icon-insta.svg"
-                width="21" height="21"></a></li>
+                width="21" height="21" alt=""></a></li>
         </ul>
         <div class="feedback-email">
-          <p>Обратная связь:<br><span><a href="#">mail@htmlacademy.ru</a></span></p>
+          <p>Обратная связь:<br><a href="#">mail@htmlacademy.ru</a></p>
         </div>
         <div class="footer-developer">
-          <p>Разработано -<br><span><a href="https://htmlacademy.ru">htmlacademy.ru</a></span></p>
+          <p>Разработано —<br><a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
         </div>
       </div>
     </div>
   </footer>
+  <script src="modal_form.js"></script>
 </body>
 
 </html>
