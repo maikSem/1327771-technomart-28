@@ -4,6 +4,7 @@ var FeedbackPopap = document.querySelector(".modal-form");
 var FeedbackClose = document.querySelector(".button-close");
 var FeedbackLogin = document.querySelector(".feedback-login");
 var FeedbackEmail = document.querySelector(".feedback-form-email");
+var FeedbackTextArea = document.querySelector(".feedback-form-textarea");
 
 var isStorageSupport = true;
 var storage = "";
@@ -29,11 +30,14 @@ FeedbackLink.addEventListener("click", function (evt) {
 FeedbackClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     FeedbackPopap.classList.remove("modal-show");
+    FeedbackPopap.classList.remove("modal-error");
 });
 
 FeedbackForm.addEventListener("submit", function (evt) {
-    if (!FeedbackLogin.value || !FeedbackEmail.value) {
+    if (!FeedbackLogin.value || !FeedbackEmail.value || !FeedbackTextArea.value) {
         evt.preventDefault();
+        FeedbackPopap.classList.remove("modal-error");
+        FeedbackPopap.offsetWidth = FeedbackPopap.offsetWidth;
         FeedbackPopap.classList.add("modal-error");
     } else {
         if (isStorageSupport) {

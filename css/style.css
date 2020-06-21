@@ -576,7 +576,7 @@ a.my-room {
   font-size: 14px;
   line-height: 18px;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
   text-transform: uppercase;
   color: var(--basic-white);
   background-color: var(--basic-red);
@@ -793,6 +793,7 @@ a.my-room {
   display: inline-block;
   margin: 113px 0 27px 24px;
   padding: 11px 46px 9px 46px;
+  vertical-align: top;
 }
 
 .button-item-menu {
@@ -1548,8 +1549,23 @@ a.control-current {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 21px;
+  padding: 17px 10px 0 0;
+  text-align: center;
+}
+
+.item-wrapper-catalog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   min-height: 172px;
+  margin-bottom: 0px;
+  padding: 0;
+  padding-right: 8px;
+  text-align: center;
 }
 
 .product-item h4 {
@@ -2018,6 +2034,7 @@ footer {
   width: 100%;
   margin: 0 auto;
   padding: 10px 0;
+  vertical-align: top;
   border: none;
 }
 
@@ -2099,6 +2116,7 @@ footer {
   display: inline-block;
   margin-left: 3px;
   padding: 10px 31px;
+  vertical-align: top;
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-black);
@@ -2137,7 +2155,7 @@ footer {
   100% {
     transform: translateY(0);
   }
-};
+}
 
 @keyframes shake {
   0%,
@@ -2159,4 +2177,4 @@ footer {
   80% {
     transform: translateX(10px);
   }
-};
+}
