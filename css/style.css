@@ -175,7 +175,7 @@ header {
   background-color: var(--basic-dark-red);
   }
 
-.header-search {
+.search-form {
   position: relative;
   flex-grow: 1;
 }
@@ -1084,7 +1084,6 @@ a.control-current {
 
 .railway-carriers {
   margin: 0;
-  /* margin-top: 3px; */
   margin-bottom: 20px;
   padding: 0;
   padding-left: 37px;
@@ -1110,6 +1109,11 @@ a.control-current {
 .railway-item:first-child,
 .railway-item:nth-child(2) {
   margin-bottom: 12px;
+}
+
+.card-wrapper {
+  max-height: 158px;
+  cursor: pointer;
 }
 
 .map-button {
@@ -2052,17 +2056,39 @@ footer {
 .modal-map {
   display: none;
   position: fixed;
-  top: 30%;
+  top: 20%;
   right: 0;
   left: 0;
   margin: auto;
   width: 943px;
   height: 449px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  background-color: #565656;
+  border-top: 7px solid var(--basic-red);
+  box-shadow: 0px 0px 14.7px rgba(47, 42, 43, 0.5);
+  z-index: 3;
 }
 
 .modal-map iframe {
+  position: relative;
+  z-index: 2;
   border: none;
+}
+
+.modal-map div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  max-height: 449px;
+  z-index: 1;
+}
+
+.modal-map img {
+  height: 449px;
+}
+
+.close-map {
+  z-index: 3;
 }
 
 /* Корзина*/
@@ -2070,13 +2096,14 @@ footer {
 .catalog-basket {
   display: none;
   position: fixed;
-  top: 40%;
+  top: 30%;
   right: 0;
   left: 0;
   margin: auto;
   width: 620px;
   background-color: var(--basic-white);
   border-top: 7px solid var(--basic-red);
+  box-shadow: 0px 20px 40px rgba(41, 52, 73, 0.75);
 }
 
 .catalog-basket p {
