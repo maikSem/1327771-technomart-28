@@ -24,15 +24,15 @@ try {
     isStorageSupport = false;
 }
 
-for (let buyButton of buyButtons) {
-    buyButton.addEventListener("click", function () {
+buyButtons.forEach(function (item, buyButtons) {
+    item.addEventListener("click", function () {
         basket.classList.add("modal-show");
         basketHeader.classList.add("basket-red");
         counterBasket++;
         basketNumber.textContent = counterBasket;
     }
     )
-};
+});
 
 closeBasket.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -48,36 +48,40 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
-FeedbackLink.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    FeedbackPopap.classList.add("modal-show");
-
-    if (storage) {
-        FeedbackLogin.value = storage;
-        FeedbackEmail.focus();
-    } else {
-        FeedbackLogin.focus();
-    }
-});
-
-FeedbackClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    FeedbackPopap.classList.remove("modal-show");
-    FeedbackPopap.classList.remove("modal-error");
-});
-
-FeedbackForm.addEventListener("submit", function (evt) {
-    if (!FeedbackLogin.value || !FeedbackEmail.value || !FeedbackTextArea.value) {
+if (FeedbackLink) {
+    FeedbackLink.addEventListener("click", function (evt) {
         evt.preventDefault();
-        FeedbackPopap.classList.remove("modal-error");
-        FeedbackPopap.offsetWidth = FeedbackPopap.offsetWidth;
-        FeedbackPopap.classList.add("modal-error");
-    } else {
-        if (isStorageSupport) {
-            localStorage.setItem("login", FeedbackLogin.value);
+        FeedbackPopap.classList.add("modal-show");
+
+        if (storage) {
+            FeedbackLogin.value = storage;
+            FeedbackEmail.focus();
+        } else {
+            FeedbackLogin.focus();
         }
-    }
-});
+    });
+
+    FeedbackClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        FeedbackPopap.classList.remove("modal-show");
+        FeedbackPopap.classList.remove("modal-error");
+    })
+};
+
+if (FeedbackForm) {
+    FeedbackForm.addEventListener("submit", function (evt) {
+        if (!FeedbackLogin.value || !FeedbackEmail.value || !FeedbackTextArea.value) {
+            evt.preventDefault();
+            FeedbackPopap.classList.remove("modal-error");
+            FeedbackPopap.offsetWidth = FeedbackPopap.offsetWidth;
+            FeedbackPopap.classList.add("modal-error");
+        } else {
+            if (isStorageSupport) {
+                localStorage.setItem("login", FeedbackLogin.value);
+            }
+        }
+    })
+};
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
@@ -98,12 +102,14 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
-card.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modalCard.classList.add("modal-show");
-});
+if (card) {
+    card.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modalCard.classList.add("modal-show");
+    });
 
-closeModalCard.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    modalCard.classList.remove("modal-show");
-});
+    closeModalCard.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modalCard.classList.remove("modal-show");
+    })
+};
