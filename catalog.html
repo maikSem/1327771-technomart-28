@@ -8,7 +8,7 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-min.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
           </form>
           <ul class="header-list">
             <li><a href="#" class="header-marker">Закладки: 0</a></li>
-            <li><a href="#" class="header-basket">Корзина: 0</a></li>
+            <li><a href="#" class="header-basket">Корзина: <span class="basket-number">0</span></a></li>
             <li><a href="#" class="header-order">Оформить заказ</a></li>
           </ul>
         </div>
@@ -40,7 +40,7 @@
       <div class="main-header">
         <h1 class="site-title">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</h1>
         <div class="main-header-contact">
-          <p class="number-phone">+7 (812) 555-05-55</p>
+          <a class="number-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <div class="authorized-user">
@@ -82,7 +82,8 @@
       <section class="breadcrumbs">
         <ul class="breadcrumbs-list">
           <li class="breadcrumbs-item">
-            <a href="index.html" aria-label="На главную"><img src="img/icon/icon-home.svg" alt="" /></a>
+            <a href="index.html"><img src="img/icon/icon-home.svg" width="14" height="12"
+                alt="На главную страницу" /></a>
           </li>
           <li class="breadcrumbs-item">
             <a href="catalog.html">Каталог</a>
@@ -432,12 +433,12 @@
       <div class="footer-copyright">
         <p>© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
         <ul class="social">
-          <li><a href="#" class="social-button" aria-label="Мы Вконтакте"><img src="img/icon/icon-vk.svg" width="26"
-                height="15" alt=""></a></li>
-          <li><a href="#" class="social-button" aria-label="Мы в Фейсбуке"><img src="img/icon/icon-fb.svg" width="12"
-                height="22" alt=""></a></li>
-          <li><a href="#" class="social-button" aria-label="Мы в инстаграм"><img src="img/icon/icon-insta.svg"
-                width="21" height="21" alt=""></a></li>
+          <li><a href="#" class="social-button"><img src="img/icon/icon-vk.svg" width="26" height="15"
+                alt="Мы Вконтакте"></a></li>
+          <li><a href="#" class="social-button"><img src="img/icon/icon-fb.svg" width="12" height="22"
+                alt="Мы в Фейсбуке"></a></li>
+          <li><a href="#" class="social-button"><img src="img/icon/icon-insta.svg" width="21" height="21"
+                alt="Мы в инстаграме"></a></li>
         </ul>
         <div class="feedback-email">
           <p>Обратная связь:<br><a href="#">mail@htmlacademy.ru</a></p>
