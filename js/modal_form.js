@@ -5,6 +5,12 @@ var FeedbackClose = document.querySelector(".button-close");
 var FeedbackLogin = document.querySelector(".feedback-login");
 var FeedbackEmail = document.querySelector(".feedback-form-email");
 var FeedbackTextArea = document.querySelector(".feedback-form-textarea");
+var card = document.querySelector(".card-wrapper");
+var modalCard = document.querySelector(".modal-map");
+var closeModalCard = document.querySelector(".close-map");
+var buyButtons = document.querySelectorAll(".button-buy");
+var basket = document.querySelector(".catalog-basket");
+var closeBasket = document.querySelector(".button-basket-close");
 
 var isStorageSupport = true;
 var storage = "";
@@ -14,6 +20,18 @@ try {
 } catch (err) {
     isStorageSupport = false;
 }
+
+for (var buyButton of buyButtons) {
+    buyButton.addEventListener("click", function () {
+        basket.classList.add("modal-show");
+    }
+    )
+};
+
+closeBasket.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    basket.classList.remove("modal-show")
+});
 
 FeedbackLink.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -51,6 +69,17 @@ window.addEventListener("keydown", function (evt) {
         if (FeedbackPopap.classList.contains("modal-show")) {
             evt.preventDefault();
             FeedbackPopap.classList.remove("modal-show");
+            FeedbackPopap.classList.remove("modal-error");
         }
     }
+});
+
+card.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalCard.classList.add("modal-show");
+});
+
+closeModalCard.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalCard.classList.remove("modal-show");
 });
