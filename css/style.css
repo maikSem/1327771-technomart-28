@@ -46,6 +46,7 @@
 :root {
   --basic-black: #000000;
   --basic-white: #ffffff;
+  --basic-light: #f4f4f4;
   --basic-blue: #3bbce3;
   --basic-dark-blue: #293449;
   --basic-gulf-blue: #32425c;
@@ -57,20 +58,34 @@
   --basic-light-green: #8ed78f;
   --basic-light-purple: #dc91d8;
   --basic-gray: #c5c5c5;
+  --basic-dark-grey: #444444;
   --basic-light-gray: #f2f6f8;
   --basic-light-grayish: #f7f3ec;
   --basic-fon: #f1f5f7;
   --green-hover: #5fbb2d;
   --midnight-hover: #161d29;
   --dark-blue-header: #1d2739;
+  --dark-blue-control: #405069;
   --social-fon: #212a3a;
   --arrow: #c1c6ce;
   --border-button: #e5e5e5;
   --border-buy: #367315;
   --dark-green-hover: #518534;
   --border-catalog: #eaeaea;
-  --gray-button: #A9A9A9;
+  --gray-button: #a9a9a9;
   --popular-product: #F9F5F0;
+  --logo-shadow: #b52933;
+  --icon-background: #3d546f;
+  --header-active: rgba(255, 255, 255, 0.5);
+  --header-item: rgba(255, 255, 255, 0.3);
+  --header-item-hover: rgba(197, 197, 197, 0.3);
+  --header-item-active: rgba(169, 169, 169, 0.3);
+  --shadow-item: rgba(0, 0, 0, 0.15);
+  --shadow-item-new: rgba(0, 0, 0, 0.25);
+  --shadow-logo: rgba(0, 0, 0, 0.24);
+  --shadow-form: rgba(0, 0, 0, 0.75);
+  --shadow-map: rgba(47, 42, 43, 0.5);
+  --shadow-basket: rgba(41, 52, 73, 0.75);
 }
 
 /* Глобальные стили*/
@@ -151,10 +166,6 @@ img {
 }
 
 /* Стили шапки*/
-header {
-  background-color: var(--basic-fon);
-  z-index: 0;
-}
 
 .box-header {
   display: -webkit-box;
@@ -176,7 +187,7 @@ header {
   text-align: center;
   background-color: var(--basic-red);
   -webkit-box-shadow: 0 5px 0 0 #b52933;
-          box-shadow: 0 5px 0 0 #b52933;;
+          box-shadow: 0 5px 0 0 var(--logo-shadow);;
   cursor: pointer;
   }
   
@@ -198,7 +209,7 @@ header {
 }
 
 .header-search path {
-  fill: rgba(255, 255, 255, 0.3);
+  fill: var(--header-item);
 }
 
 .box-header a:not(:first-child) {
@@ -387,12 +398,16 @@ input[type="search"]:focus + * .search-icon {
 .header-basket:active,
 .header-order:active,
 .header-search:active {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--header-active);
 }
 
 .header-marker:active,
 .header-basket:active {
   background-color: var(--midnight-hover);
+}
+
+.main-header-wrapper {
+  background-color: var(--basic-fon); 
 }
 
 .main-header {
@@ -545,7 +560,7 @@ input[type="search"]:focus + * .search-icon {
 
 .user-icon:hover path,
 .logout-icon:hover path {
-  fill: #3D546F;
+  fill: var(--icon-background);
 }
 
 .my-room {
@@ -623,7 +638,7 @@ a.my-room {
 }
 
 .main-navigation a:active {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--header-active);
   background-color: var(--dark-blue-header);
 }
 
@@ -641,7 +656,7 @@ a.my-room {
   padding: 0;
   background-color: var(--basic-gulf-blue);
   -webkit-box-shadow: inset 0px -5px 0px #293449;
-          box-shadow: inset 0px -5px 0px #293449;
+          box-shadow: inset 0px -5px 0px var(--basic-dark-blue);
 }
 
 .navigation-item {
@@ -782,16 +797,16 @@ a.my-room {
   line-height: 18px;
   text-transform: uppercase;
   color: var(--basic-white);
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--header-item);
 }
 
 .catalog-menu-item a:hover:not(.link-button){
   color: var(--basic-white);
-  background-color: rgba(197, 197, 197, 0.3);
+  background-color: var(--header-item-hover);
 }
 
 .catalog-menu-item a:active:not(.link-button) {
-  background-color: rgba(169, 169, 169, 0.3);
+  background-color: var(--header-item-active);
 }
 
 .materials,
@@ -1131,13 +1146,13 @@ a.my-room {
 
 .manufacturer-list li:hover {
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 20px var(--shadow-item);
 }
 
 .manufacturer-list li:active {
   opacity: 0.5;
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 20px var(--shadow-item);
 }
 
 /* Стили основного содержимого/ Сервисы*/
@@ -1182,7 +1197,6 @@ a.my-room {
 .control-list {
   position: relative;
   margin: 0;
-  /* margin-top: 3px; */
   margin-bottom: 100px;
   padding: 0;
   list-style: none;
@@ -1212,7 +1226,7 @@ a.my-room {
   color: var(--basic-white);
   background-color: var(--basic-gulf-blue);
   -webkit-box-shadow: 0px 1px 0px var(--basic-dark-blue), inset 0px 1px 0px #405069;
-          box-shadow: 0px 1px 0px var(--basic-dark-blue), inset 0px 1px 0px #405069;
+          box-shadow: 0px 1px 0px var(--basic-dark-blue), inset 0px 1px 0px var(--dark-blue-control);
 }
 
 .control-item a:not(.control-current):hover {
@@ -1558,13 +1572,13 @@ a.control-current {
   left: 0;
   width: 23px;
   height: 23px;
-  background-image: url(..//img/icon/checkbox-off.svg);
+  background-image: url(../img/icon/checkbox-off.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .filter-input-checkbox:hover:not(:disabled) + label::before {
-  background-image: url(..//img/icon/checkbox-off-hover.svg);
+  background-image: url(../img/icon/checkbox-off-hover.svg);
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -1574,7 +1588,7 @@ a.control-current {
 }
 
 .filter-input-checkbox:checked:hover:not(:disabled) + label::before {
-  background-image: url(..//img/icon/checkbox-on-hover.svg);
+  background-image: url(../img/icon/checkbox-on-hover.svg);
 }
 
 .filter-input-radio + label::before {
@@ -1584,21 +1598,21 @@ a.control-current {
   left: 0;
   width: 25px;
   height: 25px;
-  background-image: url(..//img/icon/radio-off.svg);
+  background-image: url(../img/icon/radio-off.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .filter-input-radio:hover:not(:disabled) + label::before {
-  background-image: url(..//img/icon/radio-off-hover.svg);
+  background-image: url(../img/icon/radio-off-hover.svg);
 }
 
 .filter-input-radio:checked + label::before {
-  background-image: url(..//img/icon/radio-on.svg);
+  background-image: url(../img/icon/radio-on.svg);
 } 
 
 .filter-input-radio:checked:hover:not(:disabled) + label::before {
-  background-image: url(..//img/icon/radio-on-hover.svg);
+  background-image: url(../img/icon/radio-on-hover.svg);
 }
 
 .filter-input-checkbox:disabled + label,
@@ -1689,7 +1703,7 @@ a.control-current {
   font-size: 16px;
   line-height: 18px;
   text-align: center;
-  color: #444444;
+  color: var(--basic-dark-grey);
 }
 
 /* Стили каталога/Сортировка*/
@@ -1831,7 +1845,7 @@ a.control-current {
 
 .product-item:hover {
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 20px var(--shadow-item);
 }
 
 .product-item:hover .item-button {
@@ -1895,7 +1909,7 @@ a.control-current {
   color: var(--basic-white);
   background-color: var(--basic-red);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px var(--shadow-item-new);
 }
 
 .item-button {
@@ -2109,7 +2123,7 @@ footer {
   padding: 20px 41px 17px 41px;
   background-color: var(--basic-red);
   -webkit-box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-          box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+          box-shadow: inset 0px -5px 0px var(--shadow-logo);
 }
 
 .footer-logo a:active {
@@ -2321,7 +2335,7 @@ footer {
 
 .feedback-form {
   -webkit-box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 20px 40px var(--shadow-form);
 }
 
 .feedback-wrapper {
@@ -2418,7 +2432,7 @@ footer {
   -ms-grid-column-span: 2;
   grid-column: 1 / 3;
   padding: 37px 80px;
-  background-color: #F4F4F4;
+  background-color: var(--basic-light);
 }
 
 .feedback-buttons .link-button {
@@ -2453,7 +2467,7 @@ footer {
   background-color: #565656;
   border-top: 7px solid var(--basic-red);
   -webkit-box-shadow: 0px 0px 14.7px rgba(47, 42, 43, 0.5);
-          box-shadow: 0px 0px 14.7px rgba(47, 42, 43, 0.5);
+          box-shadow: 0px 0px 14.7px var(--shadow-map);
   z-index: 3;
 }
 
@@ -2493,7 +2507,7 @@ footer {
   background-color: var(--basic-white);
   border-top: 7px solid var(--basic-red);
   -webkit-box-shadow: 0px 20px 40px rgba(41, 52, 73, 0.75);
-          box-shadow: 0px 20px 40px rgba(41, 52, 73, 0.75);
+          box-shadow: 0px 20px 40px var(--shadow-basket);
 }
 
 .catalog-basket p {
